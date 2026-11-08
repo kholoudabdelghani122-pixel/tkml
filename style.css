@@ -446,4 +446,15 @@ p,.ecosystem>p,.section-heading>p,.problem-copy p,.service p,.step p,.process-de
 .horizon{z-index:0}
 .problem{z-index:1}
 .horizon{box-shadow:none}
+.brand{width:120px;height:34px;flex:0 0 120px;background:url('assets/TKML-White.svg') center/contain no-repeat;font-size:0;letter-spacing:0}
+.brand>span{display:none}
+.core{width:152px;height:100px;padding:10px;color:transparent;font-size:0;background-image:url('assets/TKML-Wordmark-White.svg'),radial-gradient(ellipse at top,#572515,#13262e 76%);background-repeat:no-repeat;background-position:center,center;background-size:78px auto,cover;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.core span{display:none}
+.core{position:relative;background-image:url('assets/TKML-Wordmark-White.svg'),radial-gradient(ellipse at top,#572515,#13262e 76%);background-repeat:no-repeat;background-position:center,center;background-size:78px auto,cover}
+.core::before{content:none}
+.vision-core{width:205px;height:82px;font-size:0;color:transparent;letter-spacing:0;text-shadow:none;background:url('assets/TKML-Wordmark-White.svg') center/150px auto no-repeat;position:absolute}
+.vision-core::before{content:none}
+.vision-core span{display:none}
+.footer .brand{font-size:0}
+.footer .brand>span{display:none}
 
