@@ -39,4 +39,8 @@ The page is static HTML/CSS/JavaScript. Forms prepare a brief locally for copyin
 
 All graphics are CSS or inline SVG; no image downloads are needed. Platform-specific deployment metadata and authentication details are excluded.
 
-Published comparison preview: https://tkml-integration.fast-jelly-7278.chatgpt.site
+Client preview: https://kholoudabdelghani122-pixel.github.io/tkml/src/showcase/variant-02/
+
+## Current TKML website variant
+
+The in-progress Variant 02 page is available at `src/showcase/variant-02/` in the repository. GitHub Pages publishes this path alongside the original root page.

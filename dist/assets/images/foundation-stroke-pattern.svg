@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3371.29 2006.12">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        fill: url(#New_Pattern_7);
+      }
+
+      .cls-2 {
+        stroke: #f05b1b;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+    <pattern id="New_Pattern_7" data-name="New Pattern 7" x="0" y="0" width="733.29" height="943" patternTransform="translate(1191.5294 1019.1413)" patternUnits="userSpaceOnUse" viewBox="0 0 733.29 943">
+      <g>
+        <rect class="cls-1" width="733.29" height="943"/>
+        <polygon class="cls-2" points="732.29 944.32 544.7 1097.26 366.65 1250.19 732.29 1250.19 732.29 944.32"/>
+        <g>
+          <path class="cls-2" d="M366.65,670.77v-363.58L1,624.99v317.8s365.65,0,365.65-.01v-272Z"/>
+          <polygon class="cls-2" points="732.29 1.32 544.7 154.26 366.65 307.19 732.29 307.19 732.29 1.32"/>
+          <rect class="cls-2" x="1" y="1.32" width="365.65" height="305.87"/>
+        </g>
+        <path class="cls-2" d="M366.65-272.23v-363.58L1-318.01V-.22s365.65,0,365.65-.01v-272Z"/>
+      </g>
+    </pattern>
+  </defs>
+  <rect class="cls-3" x="0" width="3371.29" height="2006.12"/>
+</svg>

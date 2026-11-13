@@ -1,0 +1,131 @@
+/* Client Editorial Design System — v2.0, 2026-11-12
+   Exact client palette. All actual font files must be copied into assets/fonts/.
+   See assets/fonts/README.md. No third-party font or original-reference cobalt. */
+
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Light.otf") format("opentype"); font-style: normal; font-weight: 300; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Regular.otf") format("opentype"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Medium.otf") format("opentype"); font-style: normal; font-weight: 500; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Semibold.otf") format("opentype"); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Bold.otf") format("opentype"); font-style: normal; font-weight: 700; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Extrabold.otf") format("opentype"); font-style: normal; font-weight: 800; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Light Italic.otf") format("opentype"); font-style: italic; font-weight: 300; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Regular Italic.otf") format("opentype"); font-style: italic; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Medium Italic.otf") format("opentype"); font-style: italic; font-weight: 500; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade SemiBold Italic.otf") format("opentype"); font-style: italic; font-weight: 600; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade Bold Italic.otf") format("opentype"); font-style: italic; font-weight: 700; font-display: swap; }
+@font-face { font-family: "Neue Regrade"; src: url("../../assets/fonts/Neue Regrade ExtraBold Italic.otf") format("opentype"); font-style: italic; font-weight: 800; font-display: swap; }
+
+:root {
+  /* Eight exact approved primitives. */
+  --color-navy: #0D1C22;
+  --color-orange: #F05B1B;
+  --color-ice: #BBF1FF;
+  --color-black: #000000;
+  --color-grey: #5B5B5B;
+  --color-muted: #A0A0A0;
+  --color-light-grey: #DBDBDB;
+  --color-white: #FFFFFF;
+
+  /* Semantic uses. Non-primitive effects derive only from palette primitives. */
+  --surface-page: var(--color-navy);
+  --surface-deep: var(--color-black);
+  --surface-feature: var(--color-orange);
+  --surface-cool: var(--color-ice);
+  --text-primary: var(--color-white);
+  --text-secondary: var(--color-muted);
+  --text-on-feature: var(--color-navy);
+  --text-on-cool: var(--color-navy);
+  --border-dark: rgba(255, 255, 255, 0.18);
+  --border-light: rgba(13, 28, 34, 0.24);
+  --focus-dark: var(--color-ice);
+  --focus-light: var(--color-navy);
+  --font-display: "Neue Regrade", Arial, sans-serif;
+  --font-body: "Neue Regrade", Arial, sans-serif;
+
+  /* Layout */
+  --container-max: 1320px;
+  --page-gutter: clamp(18px, 4.4vw, 76px);
+  --grid-gap: clamp(12px, 2vw, 28px);
+  --section-space: clamp(80px, 9vw, 152px);
+  --space-1: 4px; --space-2: 8px; --space-3: 12px;
+  --space-4: 16px; --space-6: 24px; --space-8: 32px;
+  --space-10: 40px; --space-12: 48px; --space-16: 64px;
+  --space-20: 80px; --space-24: 96px; --space-32: 128px;
+  --space-40: 160px;
+
+  /* Typography — illustrative defaults; refine by actual approved page copy. */
+  --type-hero: clamp(3.5rem, 9vw, 10rem);
+  --type-display: clamp(3.25rem, 7.5vw, 8rem);
+  --type-heading-xl: clamp(2.8rem, 5.1vw, 6rem);
+  --type-heading-lg: clamp(2rem, 3.1vw, 4rem);
+  --type-heading-md: clamp(1.5rem, 2.3vw, 2.5rem);
+  --type-lead: clamp(1.1rem, 1.4vw, 1.4rem);
+  --type-body: 1rem;
+  --type-meta: 0.6875rem;
+
+  /* Shapes and motion */
+  --radius-0: 0; --radius-ui: 4px; --radius-media: 8px;
+  --z-base: 0; --z-light: 1; --z-art: 2; --z-copy: 3; --z-nav: 10;
+  --ease-editorial: cubic-bezier(.20,.75,.25,1);
+  --duration-fast: 180ms; --duration-ui: 300ms; --duration-reveal: 680ms;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; color: var(--text-primary); background: var(--surface-page); font-family: var(--font-body); }
+img, picture, video, svg { display: block; max-width: 100%; }
+button, input, textarea, select { font: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--focus-dark); outline-offset: 4px; }
+.section--orange :focus-visible, .section--ice :focus-visible { outline-color: var(--focus-light); }
+.container { width: min(calc(100% - var(--page-gutter) * 2), var(--container-max)); margin-inline: auto; }
+.grid-12 { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: var(--grid-gap); }
+.section { position: relative; isolation: isolate; padding-block: var(--section-space); }
+.section--orange { background: var(--surface-feature); color: var(--text-on-feature); }
+.section--ice { background: var(--surface-cool); color: var(--text-on-cool); }
+.section--black { background: var(--surface-deep); }
+.text-muted { color: var(--text-secondary); }
+.type-hero { font-size: var(--type-hero); font-weight: 750; line-height: .88; letter-spacing: -.06em; }
+.type-display { font-size: var(--type-display); font-weight: 740; line-height: .92; letter-spacing: -.055em; }
+.type-heading-xl { font-size: var(--type-heading-xl); font-weight: 700; line-height: .96; letter-spacing: -.05em; }
+.type-heading-lg { font-size: var(--type-heading-lg); font-weight: 650; line-height: 1.01; letter-spacing: -.04em; }
+.type-lead { font-size: var(--type-lead); line-height: 1.45; letter-spacing: -.015em; }
+.type-body { font-size: var(--type-body); line-height: 1.6; }
+.type-meta { font-size: var(--type-meta); letter-spacing: .11em; line-height: 1.45; text-transform: uppercase; font-weight: 600; }
+
+/* Brand-only gradients, applied selectively, never on every element. */
+.gradient-atmospheric {
+  background:
+    radial-gradient(ellipse 45% 54% at 78% 42%, rgba(187,241,255,.27), transparent 72%),
+    radial-gradient(ellipse 50% 56% at 62% 75%, rgba(240,91,27,.20), transparent 78%),
+    var(--color-navy);
+}
+.gradient-industrial {
+  background: linear-gradient(140deg, var(--color-black), var(--color-navy) 55%, rgba(187,241,255,.20));
+}
+.gradient-cool-stage {
+  background: linear-gradient(180deg, var(--color-navy) 0%, rgba(187,241,255,.28) 57%, var(--color-ice) 100%);
+}
+
+.button-outline, .button-primary {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 44px; padding: 12px 20px; border-radius: var(--radius-ui);
+  text-decoration: none; font-weight: 600; transition: background var(--duration-ui), color var(--duration-ui), transform var(--duration-fast);
+}
+.button-outline { background: transparent; border: 1px solid currentColor; }
+.button-primary { background: var(--color-orange); color: var(--color-navy); border: 1px solid var(--color-orange); }
+.button-outline:hover, .button-primary:hover { transform: translateY(-2px); }
+.section--orange .button-primary { background: var(--color-navy); color: var(--color-white); border-color: var(--color-navy); }
+
+@media (max-width: 1023px) {
+  .grid-12 { grid-template-columns: repeat(8,minmax(0,1fr)); }
+  :root { --page-gutter: clamp(20px, 4vw, 40px); }
+}
+@media (max-width: 767px) {
+  .grid-12 { grid-template-columns: repeat(4,minmax(0,1fr)); }
+  :root { --page-gutter: clamp(16px,5vw,24px); --grid-gap: 12px; --section-space: clamp(70px,17vw,112px); --type-hero: clamp(3.2rem,11.8vw,5.8rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,*::before,*::after { animation-duration: .01ms!important; transition-duration: .01ms!important; scroll-behavior: auto!important; }
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0D1C22">
+  <title>TKML Systems — Page coming soon</title>
+  <link rel="icon" type="image/svg+xml" href="../../../../assets/images/tkml-favicon.svg?v=2">
+  <link rel="stylesheet" href="../../../styles/tokens.css">
+  <link rel="stylesheet" href="../../../styles/components.css">
+  <link rel="stylesheet" href="../../../styles/variant-02.css?v=footer-future-pages">
+</head>
+<body class="v2-coming-soon-page">
+  <header class="v2-coming-soon__header">
+    <a class="v2-wordmark" href="../index.html" aria-label="TKML Systems home">TKML <span>Systems</span></a>
+    <span>Tripoli, Libya</span>
+  </header>
+  <main class="v2-coming-soon">
+    <div class="v2-coming-soon__art" aria-hidden="true"></div>
+    <div class="v2-coming-soon__content">
+      <p class="v2-footer__eyebrow">TKML Systems</p>
+      <h1><span id="coming-soon-section">More from TKML</span><br><span>coming soon.</span></h1>
+      <p>This page is being prepared. Please check back soon.</p>
+      <a class="button button--outline" href="../index.html">Back to TKML</a>
+    </div>
+  </main>
+  <script>
+    const sectionName = new URLSearchParams(window.location.search).get('section');
+    if (sectionName) {
+      const safeName = sectionName.slice(0, 60);
+      document.getElementById('coming-soon-section').textContent = safeName;
+      document.title = `${safeName} — TKML Systems`;
+    }
+  </script>
+</body>
+</html>

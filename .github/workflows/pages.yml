@@ -20,6 +20,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Add current Variant 02 page to Pages artifact
+        run: |
+          mkdir -p dist/src dist/scripts dist/assets
+          cp -R src/showcase dist/src/
+          cp -R src/styles dist/src/
+          cp scripts/tkml-motion.js dist/scripts/
+          cp -R assets/images dist/assets/
+          cp -R assets/fonts dist/assets/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
