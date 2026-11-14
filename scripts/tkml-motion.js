@@ -442,6 +442,141 @@ const initializeTKMLMotion = function () {
     });
   }
 
+  const requestFlow = document.querySelector('.v2-request-flow');
+  if (requestFlow) {
+    const steps = [
+      ['Send a request.', 'Share what you need, your specifications, priorities, and target timing.'],
+      ['Screen potential suppliers.', 'TKML checks the request and identifies suppliers whose capabilities fit the scope.'],
+      ['Coordinate quotations.', 'TKML requests offers from potential suppliers and clarifies details such as price basis, lead time, and terms.'],
+      ['Review organized quotations.', 'TKML organizes the offers so you can review them and agree on the next step.']
+    ];
+    const overview = ['From request to quotations', 'You share a request. TKML screens potential suppliers, coordinates quotations, and sends the organized offers back to you.'];
+    const controls = requestFlow.querySelector('.v2-request-flow__controls');
+    const detail = requestFlow.querySelector('.v2-request-flow__details');
+    const detailTitle = requestFlow.querySelector('.v2-request-flow__detail-title');
+    const detailCopy = requestFlow.querySelector('.v2-request-flow__detail-copy');
+    const buttons = [...controls.querySelectorAll('button[data-select]')];
+    const nodes = [...requestFlow.querySelectorAll('.v2-request-flow__node')];
+    const buyer = requestFlow.querySelector('[data-node="buyer"]');
+    const hub = requestFlow.querySelector('[data-node="hub"]');
+    const suppliers = [...requestFlow.querySelectorAll('[data-node="supplier"]')];
+    const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let active = -1;
+    let timeline;
+
+    const routes = [...requestFlow.querySelectorAll('.v2-request-flow__route')].map((path) => {
+      const packet = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      packet.setAttribute('class', 'v2-request-flow__packet');
+      packet.setAttribute('r', '4');
+      path.ownerSVGElement.append(packet);
+      return { path, packet, stage: Number(path.dataset.stage), supplier: path.dataset.supplier === undefined ? null : Number(path.dataset.supplier) };
+    });
+    const visibleRoutes = () => routes.filter(({ path }) => {
+      const rect = path.ownerSVGElement.getBoundingClientRect();
+      return rect.width > 0 && rect.height > 0;
+    });
+    const paintStep = (index, { completed = false, preview = false } = {}) => {
+      const [heading, copy] = steps[index] ?? overview;
+      detailTitle.textContent = heading;
+      detailCopy.textContent = copy;
+      detail.setAttribute('aria-live', preview ? 'off' : 'polite');
+      buttons.forEach((button) => button.setAttribute('aria-pressed', String(!preview && Number(button.dataset.select) === active)));
+      const activeNodes = index === 0 ? [buyer, hub]
+        : index === 1 ? [hub]
+          : index === 2 ? [hub, ...(completed ? suppliers : [])]
+            : index === 3 ? [hub, ...(completed ? [buyer] : [])] : [];
+      nodes.forEach((node) => {
+        node.classList.toggle('is-active', !preview && activeNodes.includes(node));
+        node.classList.toggle('is-preview', preview && activeNodes.includes(node));
+      });
+      visibleRoutes().forEach(({ path, stage }) => path.classList.toggle('is-active', stage === index));
+    };
+    const clearAnimation = () => {
+      if (timeline) {
+        timeline.pause(0);
+        timeline.kill();
+        timeline = null;
+      }
+      routes.forEach(({ packet }) => {
+        if (hasMotion) gsap.set(packet, { opacity: 0 });
+        else packet.style.opacity = '0';
+      });
+      nodes.forEach((node) => node.classList.remove('is-active', 'is-preview'));
+      routes.forEach(({ path }) => path.classList.remove('is-active'));
+      if (hub && hasMotion) gsap.set(hub, { clearProps: 'filter' });
+    };
+    const pulseRoute = (tl, route, start, duration, onArrive) => {
+      const progress = { value: 0 };
+      const length = route.path.getTotalLength();
+      const update = () => {
+        const point = route.path.getPointAtLength(progress.value * length);
+        route.packet.setAttribute('cx', point.x);
+        route.packet.setAttribute('cy', point.y);
+      };
+      tl.call(update, [], start).set(route.packet, { opacity: 1 }, start)
+        .to(progress, { value: 1, duration, ease: 'none', onUpdate: update }, start)
+        .to(route.packet, { opacity: 0, duration: 0.12 }, start + duration);
+      if (onArrive) tl.call(onArrive, [], start + duration);
+    };
+    const activateStep = (index) => {
+      if (!Number.isInteger(index) || index < 0 || index >= steps.length) return;
+      active = index;
+      clearAnimation();
+      paintStep(index);
+      if (!hasMotion || motionPreference.matches) {
+        paintStep(index, { completed: true });
+        return;
+      }
+      timeline = makeTimeline({ paused: true });
+      const availableRoutes = visibleRoutes();
+      if (index === 0) {
+        const route = availableRoutes.find((item) => item.stage === 0);
+        if (route) pulseRoute(timeline, route, 0, 0.72);
+      } else if (index === 1 && hub) {
+        timeline.to(hub, { filter: 'brightness(1.28)', duration: 0.24, yoyo: true, repeat: 3, ease: 'sine.inOut', clearProps: 'filter' }, 0);
+      } else if (index === 2) {
+        availableRoutes.filter((item) => item.stage === 2).forEach((route) => {
+          const supplier = suppliers[route.supplier];
+          pulseRoute(timeline, route, (route.supplier ?? 0) * 0.19, 0.66, () => supplier?.classList.add('is-active'));
+        });
+      } else if (index === 3) {
+        const route = availableRoutes.find((item) => item.stage === 3);
+        if (route) pulseRoute(timeline, route, 0, 0.82, () => buyer?.classList.add('is-active'));
+      }
+      timeline.play(0);
+    };
+
+    listen(controls, 'click', (event) => {
+      const button = event.target.closest('button[data-select]');
+      if (button && controls.contains(button)) activateStep(Number(button.dataset.select));
+    });
+    buttons.forEach((button) => {
+      const index = Number(button.dataset.select);
+      listen(button, 'pointerenter', (event) => { if (event.pointerType === 'mouse' && matchMedia('(hover: hover) and (pointer: fine)').matches) paintStep(index, { preview: true }); });
+      listen(button, 'pointerleave', (event) => { if (event.pointerType === 'mouse') paintStep(active, { completed: true }); });
+    });
+    nodes.forEach((node) => {
+      listen(node, 'pointerenter', (event) => {
+        if (event.pointerType !== 'mouse' || !matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+        const index = node.dataset.node === 'buyer' ? 0 : node.dataset.node === 'hub' ? 1 : 2;
+        paintStep(index, { preview: true });
+      });
+      listen(node, 'pointerleave', (event) => { if (event.pointerType === 'mouse') paintStep(active, { completed: true }); });
+    });
+    listen(motionPreference, 'change', () => {
+      if (!motionPreference.matches || active < 0) return;
+      clearAnimation();
+      paintStep(active, { completed: true });
+    });
+    cleanups.push(() => {
+      timeline?.kill();
+      routes.forEach(({ packet }) => packet.remove());
+    });
+    detail.setAttribute('aria-labelledby', 'request-flow-detail-title');
+    detailTitle.id = 'request-flow-detail-title';
+    paintStep(-1);
+  }
+
   const principle = document.querySelector('.v2-principle');
   if (principle && hasMotion && !reducedMotion) {
     const stroke = principle.querySelector('.v2-principle__stroke-art');
@@ -462,12 +597,12 @@ const initializeTKMLMotion = function () {
     const principleMM = gsap.matchMedia();
     principleMM.add('(min-width: 768px)', () => {
       const tl = makePrincipleTimeline(true);
-      ScrollTrigger.create({ trigger: cta, start: 'top 90%', once: true, onEnter: () => tl.play(0) });
+      ScrollTrigger.create({ trigger: principle, start: 'top 85%', once: true, onEnter: () => tl.play(0) });
     });
     principleMM.add('(max-width: 767px)', () => {
       const stacked = artwork && artwork.getBoundingClientRect().top >= cta.getBoundingClientRect().bottom;
       const tl = makePrincipleTimeline(!stacked);
-      ScrollTrigger.create({ trigger: cta, start: 'top 90%', once: true, onEnter: () => tl.play(0) });
+      ScrollTrigger.create({ trigger: principle, start: 'top 85%', once: true, onEnter: () => tl.play(0) });
       if (stacked && artwork) {
         const artTl = makeTimeline({ paused: true });
         artTl.fromTo(artwork, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0)', duration: 0.6, clearProps: 'clipPath' });
@@ -541,14 +676,6 @@ const initializeTKMLMotion = function () {
     updateActive();
   }
 
-  const footerLinks = footer ? [...footer.querySelectorAll('.v2-footer__link-groups a, .v2-footer__bottom a, .v2-footer__socials a')] : [];
-  footerLinks.forEach((link) => {
-    const social = link.closest('.v2-footer__socials');
-    const base = getComputedStyle(link);
-    const enter = () => tween(link, social ? { color: '#F05B1B', borderColor: '#F05B1B', backgroundColor: 'rgba(240,91,27,.12)', duration: 0.16, ease: 'power1.out' } : { color: '#F05B1B', duration: 0.16, ease: 'power1.out' });
-    const leave = () => tween(link, social ? { color: base.color, borderColor: base.borderColor, backgroundColor: base.backgroundColor, duration: 0.16, ease: 'power1.out' } : { color: base.color, duration: 0.16, ease: 'power1.out' });
-    bindHover(link, enter, leave);
-  });
   const enquiryLinks = footer ? [...footer.querySelectorAll('.v2-footer__contact-links a')] : [];
   enquiryLinks.forEach((link) => {
     const setLine = (active) => tween(link, { '--enquiry-line-progress': active ? 1 : 0, duration: 0.18, ease: 'power1.out' });

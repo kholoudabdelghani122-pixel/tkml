@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="../../../assets/images/tkml-favicon.svg?v=2">
   <link rel="stylesheet" href="../../styles/tokens.css">
   <link rel="stylesheet" href="../../styles/components.css">
-  <link rel="stylesheet" href="../../styles/variant-02.css?v=service-development-railcar-mobile">
+  <link rel="stylesheet" href="../../styles/variant-02.css?v=footer-social-reset-20261114">
   <link rel="stylesheet" href="../../styles/references.css?v=process-cards-reference">
 </head>
 <body>
@@ -19,11 +19,11 @@
       <nav class="site-nav" aria-label="Main navigation">
         <a href="#top">Home</a><a href="pages/coming-soon.html?section=I%20Supply">I Supply</a><a href="pages/coming-soon.html?section=Partners">Partners</a><a href="#company">About</a><a href="pages/coming-soon.html?section=News">News</a><a href="#connect">Contact</a>
       </nav>
+      <a class="button button--outline v2-header-cta v2-connect-cta" href="#connect">Request sourcing</a>
       <details class="mobile-nav v2-mobile-nav">
-        <summary>Open navigation</summary>
+        <summary aria-label="Open navigation"><span class="sr-only">Open navigation</span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></svg></summary>
         <nav aria-label="Main navigation"><a href="#top">Home</a><a href="pages/coming-soon.html?section=I%20Supply">I Supply</a><a href="pages/coming-soon.html?section=Partners">Partners</a><a href="#company">About</a><a href="pages/coming-soon.html?section=News">News</a><a href="#connect">Contact</a></nav>
       </details>
-      <a class="button button--outline v2-header-cta v2-connect-cta" href="#connect">Request Sourcing</a>
     </div>
   </header>
   <div id="smooth-wrapper">
@@ -154,6 +154,58 @@
     </section>
 
     <div class="v2-lower-flow">
+    <section class="section v2-request-flow" id="request-flow" aria-labelledby="request-flow-title">
+      <div class="container">
+        <div class="v2-request-flow__heading">
+          <h2 id="request-flow-title">How a request <span>moves through tkml</span></h2>
+          <p>From your first requirement to organized quotations, see how TKML coordinates the next steps.</p>
+        </div>
+        <div class="v2-request-flow__panel" aria-label="TKML sourcing workflow">
+          <div class="v2-request-flow__controls" aria-label="Explore the four steps" role="group">
+            <button type="button" data-select="0" aria-controls="request-flow-details" aria-pressed="false"><span>01</span>Request</button>
+            <button type="button" data-select="1" aria-controls="request-flow-details" aria-pressed="false"><span>02</span>Screen</button>
+            <button type="button" data-select="2" aria-controls="request-flow-details" aria-pressed="false"><span>03</span>Coordinate</button>
+            <button type="button" data-select="3" aria-controls="request-flow-details" aria-pressed="false"><span>04</span>Return quotes</button>
+          </div>
+          <div class="v2-request-flow__stage">
+            <svg class="v2-request-flow__wiring v2-request-flow__wiring--wide" viewBox="0 0 680 360" aria-hidden="true" focusable="false">
+              <defs>
+                <marker id="request-flow-arrow-wide" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path fill="#A0A0A0" d="M0 0L7 3.5 0 7Z"/></marker>
+                <marker id="request-flow-return-wide" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path fill="#F05B1B" d="M0 0L7 3.5 0 7Z"/></marker>
+              </defs>
+              <path class="v2-request-flow__route" data-stage="0" d="M145 174H267" marker-end="url(#request-flow-arrow-wide)"/>
+              <path class="v2-request-flow__route" data-stage="2" data-supplier="0" d="M417 98H540" marker-end="url(#request-flow-arrow-wide)"/>
+              <path class="v2-request-flow__route" data-stage="2" data-supplier="1" d="M417 177H540" marker-end="url(#request-flow-arrow-wide)"/>
+              <path class="v2-request-flow__route" data-stage="2" data-supplier="2" d="M417 256H540" marker-end="url(#request-flow-arrow-wide)"/>
+              <path class="v2-request-flow__route v2-request-flow__route--return" data-stage="3" d="M342 261V310H102V216" marker-end="url(#request-flow-return-wide)"/>
+              <text x="203" y="161" text-anchor="middle">Request</text><text class="is-small" x="595" y="297" text-anchor="middle">Screened suppliers</text><text class="is-warm" x="221" y="333" text-anchor="middle">Organized quotations</text>
+            </svg>
+            <svg class="v2-request-flow__wiring v2-request-flow__wiring--narrow" viewBox="0 0 336 386" aria-hidden="true" focusable="false">
+              <defs>
+                <marker id="request-flow-arrow-mobile" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path fill="#A0A0A0" d="M0 0L7 3.5 0 7Z"/></marker>
+                <marker id="request-flow-return-mobile" markerWidth="7" markerHeight="7" refX="7" refY="3.5" orient="auto"><path fill="#F05B1B" d="M0 0L7 3.5 0 7Z"/></marker>
+              </defs>
+              <path class="v2-request-flow__route" data-stage="0" d="M168 78V131" marker-end="url(#request-flow-arrow-mobile)"/>
+              <path class="v2-request-flow__route" data-stage="2" data-supplier="0" d="M168 235V262H66V298" marker-end="url(#request-flow-arrow-mobile)"/>
+              <path class="v2-request-flow__route" data-stage="2" data-supplier="1" d="M168 235V298" marker-end="url(#request-flow-arrow-mobile)"/>
+              <path class="v2-request-flow__route" data-stage="2" data-supplier="2" d="M168 235V262H270V298" marker-end="url(#request-flow-arrow-mobile)"/>
+              <path class="v2-request-flow__route v2-request-flow__route--return" data-stage="3" d="M70 182H31V50H70" marker-end="url(#request-flow-return-mobile)"/>
+              <text x="180" y="108">Request</text><text class="is-warm" transform="translate(19 173) rotate(-90)">Organized quotes</text><text class="is-small" x="168" y="374" text-anchor="middle">Screened suppliers</text>
+            </svg>
+            <div class="v2-request-flow__node v2-request-flow__buyer" data-node="buyer" aria-hidden="true"><strong>Your business</strong><small>Buyer</small></div>
+            <div class="v2-request-flow__node v2-request-flow__hub" data-node="hub" aria-hidden="true"><strong>tkml<br>Systems</strong><small>Screen · Coordinate<br>Facilitate</small></div>
+            <div class="v2-request-flow__node v2-request-flow__supplier v2-request-flow__supplier--a" data-node="supplier" data-supplier="0" aria-hidden="true"><strong>Supplier A</strong></div>
+            <div class="v2-request-flow__node v2-request-flow__supplier v2-request-flow__supplier--b" data-node="supplier" data-supplier="1" aria-hidden="true"><strong>Supplier B</strong></div>
+            <div class="v2-request-flow__node v2-request-flow__supplier v2-request-flow__supplier--c" data-node="supplier" data-supplier="2" aria-hidden="true"><strong>Supplier C</strong></div>
+          </div>
+          <div class="v2-request-flow__details" id="request-flow-details" aria-live="polite">
+            <strong class="v2-request-flow__detail-title">From request to quotations</strong>
+            <p class="v2-request-flow__detail-copy">You share a request. TKML screens potential suppliers, coordinates quotations, and sends the organized offers back to you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="v2-built-for" aria-labelledby="built-for-title">
       <div class="container">
         <div class="v2-built-for__head">
@@ -213,6 +265,8 @@
       </div>
     </section>
 
+
+
     <section class="section v2-principle" aria-labelledby="principle-title">
       <div class="container v2-principle__inner">
         <img class="v2-principle__stroke-art" src="../../../assets/images/foundation-stroke-pattern.svg" alt="" aria-hidden="true">
@@ -251,7 +305,7 @@
             <a href="pages/coming-soon.html?section=Partnership%20enquiries">Partnership enquiries</a>
           </nav>
           <div class="v2-footer__socials">
-            <span>Follow tkml</span>
+            <span>Follow tkml systems</span>
             <div>
               <a href="pages/coming-soon.html?section=X" aria-label="TKML on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3L12 14.7 5.6 22H2.4l7.3-8.4L1.9 2h6.5l4.4 6.7L18.9 2Zm-1.1 18h1.7L7.4 3.9H5.6L17.8 20Z"/></svg></a>
               <a href="pages/coming-soon.html?section=LinkedIn" aria-label="TKML on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.4H1.8V22h3.4V8.4ZM3.5 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM22.2 14.2c0-4.1-2.2-6-5.2-6a4.5 4.5 0 0 0-4 2.2V8.4H9.6V22H13v-7.1c0-1.9.4-3.7 2.7-3.7s2.3 2.1 2.3 3.8V22h3.4l.8-7.8Z"/></svg></a>
@@ -267,6 +321,6 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
-  <script src="../../../scripts/tkml-motion.js"></script>
+  <script src="../../../scripts/tkml-motion.js?v=footer-social-reset-20261114"></script>
 </body>
 </html>
