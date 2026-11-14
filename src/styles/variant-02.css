@@ -459,6 +459,15 @@
   .v2-header .v2-header-cta{padding-inline:8px;font-size:.68rem}
 }
 
+/* Keep every mobile CTA at the hero button's type size. */
+@media(max-width:767px){
+  .v2-hero .v2-actions .button,
+  .v2-opportunity .button,
+  .v2-about__cta,
+  .v2-principle__copy>.button,
+  .v2-header .v2-header-cta{font-size:.84rem}
+}
+
 /* Tighten the vertical rhythm between major page sections by 20%. */
 .v2-service-mosaic{padding-top:clamp(24px,4.32vw,61px);padding-bottom:clamp(63px,7.2vw,104px)}
 .v2-opportunity{padding-top:clamp(69px,8vw,112px);padding-bottom:clamp(66px,8vw,115px)}
