@@ -545,7 +545,7 @@
   .v2-request-flow__controls{grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px}
   .v2-request-flow__controls button{min-height:48px;padding:8px 10px;font-size:.78rem}
 }
-.v2-coming-soon-page{min-height:100svh;background:var(--color-navy)}
+.v2-coming-soon-page{min-height:100svh;background:radial-gradient(ellipse 55% 60% at 82% 42%,rgba(240,91,27,.16),transparent 72%),linear-gradient(145deg,var(--color-navy),var(--color-black))}
 .v2-coming-soon__header{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px var(--page-gutter);color:var(--color-muted);font-size:.82rem}
 .v2-coming-soon__header .v2-wordmark{font-size:1.2rem}
 .v2-coming-soon{position:relative;isolation:isolate;min-height:100vh;min-height:100svh;display:grid;place-items:center;overflow:hidden;padding:60px var(--page-gutter);background:radial-gradient(ellipse 55% 60% at 82% 42%,rgba(240,91,27,.16),transparent 72%),linear-gradient(145deg,var(--color-navy),var(--color-black))}
@@ -575,3 +575,7 @@
 
 /* Keep the coming-soon page eyebrow's brand casing. */
 .v2-coming-soon-page .v2-coming-soon__content > .v2-footer__eyebrow { text-transform: none; }
+
+
+/* Let the coming-soon hero gradient flow into its footer. */
+.v2-coming-soon-page .v2-footer { background: transparent; }
