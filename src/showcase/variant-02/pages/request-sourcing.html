@@ -145,18 +145,35 @@
 
           <section class="rfq-step" data-step="4" aria-labelledby="rfq-step-4-title" hidden>
             <h2 id="rfq-step-4-title" class="rfq-step__title" tabindex="-1">Review your request</h2>
-            <p class="rfq-step__intro">Check the information below. Use Edit to update a group before preparing your preview.</p>
+            <p class="rfq-step__intro">Check the information below. Edit any section before finishing your request.</p>
             <div class="rfq-review" id="rfq-review"></div>
             <div class="rfq-consent">
               <input id="confirmation" name="confirmation" type="checkbox" required aria-describedby="error-confirmation">
               <div><label for="confirmation">I agree that TKML Systems may use these details to review my request and contact me about it.</label><p class="rfq-error" id="error-confirmation"></p></div>
             </div>
-            <p class="rfq-preview-note">Preview mode: the published privacy notice and request submission service are not connected yet.</p>
+            <p class="rfq-preview-note">Demo form: requests are not delivered to TKML until the submission service is connected.</p>
             <div class="rfq-preview-result" id="rfq-preview-result" role="status" aria-live="polite" hidden>
-              <strong>Your request preview is ready.</strong>
-              <p>This preview does not send your request. Your details and selected attachments remain in this page.</p>
-              <button class="button button--outline" id="copy-summary" type="button">Copy summary</button>
-              <span class="rfq-copy-status" id="copy-status" aria-live="polite"></span>
+              <div class="rfq-status-panel" id="rfq-success-status" hidden>
+                <span class="rfq-status-icon" aria-hidden="true">✓</span>
+                <div>
+                  <strong>Thank you for your request.</strong>
+                  <p>Someone from TKML will contact you within the next 24 hours.</p>
+                  <p class="rfq-status-note">This is a design preview only. Your request has not been sent to TKML yet.</p>
+                </div>
+              </div>
+              <div class="rfq-status-panel rfq-status-panel--error" id="rfq-failure-status" role="alert" hidden>
+                <span class="rfq-status-icon" aria-hidden="true">!</span>
+                <div>
+                  <strong>We couldn’t complete your request.</strong>
+                  <p>Your details and attachments are still here. Please try again.</p>
+                  <p class="rfq-status-note">This is a sample failure state. The request service is not connected yet.</p>
+                </div>
+              </div>
+              <div class="rfq-status-actions">
+                <button class="button button--outline" id="copy-summary" type="button">Copy summary</button>
+                <button class="button button--primary" id="rfq-retry" type="button" hidden>Try again</button>
+                <span class="rfq-copy-status" id="copy-status" aria-live="polite"></span>
+              </div>
             </div>
           </section>
 
@@ -165,7 +182,7 @@
             <button class="button button--outline" id="rfq-back" type="button" hidden>Back</button>
             <span class="rfq-controls__spacer"></span>
             <button class="button button--primary" id="rfq-continue" type="button">Continue</button>
-            <button class="button button--primary" id="rfq-preview" type="submit" hidden>Preview request</button>
+            <button class="button button--primary" id="rfq-preview" type="submit" hidden>Finish request</button>
           </div>
         </form>
       </div>
