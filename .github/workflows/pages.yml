@@ -26,6 +26,7 @@ jobs:
           cp -R src/showcase dist/src/
           cp -R src/styles dist/src/
           cp scripts/tkml-motion.js dist/scripts/
+          cp scripts/request-sourcing.js dist/scripts/
           cp -R assets/images dist/assets/
           cp -R assets/fonts dist/assets/
       - uses: actions/upload-pages-artifact@v3
