@@ -23,10 +23,13 @@
   const previewResult = document.getElementById('rfq-preview-result');
   const copySummaryButton = document.getElementById('copy-summary');
   const copyStatus = document.getElementById('copy-status');
+  const successStatus = document.getElementById('rfq-success-status');
+  const failureStatus = document.getElementById('rfq-failure-status');
+  const retryButton = document.getElementById('rfq-retry');
   const maxFiles = 10;
   const maxBytes = 20 * 1024 * 1024;
   const allowedExtensions = new Set(['pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv', 'png', 'jpg', 'jpeg', 'zip']);
-  const stepNames = ['What do you need?', 'Quantity & delivery', 'Company & contact', 'Review & submit'];
+  const stepNames = ['What do you need?', 'Quantity & delivery', 'Company & contact', 'Review & finish'];
   let currentStep = 1;
   let files = [];
 
@@ -35,6 +38,10 @@
 
   function clearPreview() {
     previewResult.hidden = true;
+    successStatus.hidden = true;
+    failureStatus.hidden = true;
+    retryButton.hidden = true;
+    preview.hidden = currentStep !== 4;
     copyStatus.textContent = '';
   }
 
@@ -266,7 +273,7 @@
   function buildSummary() {
     const data = new FormData(form);
     const rows = [
-      'TKML Systems — Sourcing request preview',
+      'TKML Systems — Sourcing request',
       '',
       'PRODUCT & SPECIFICATIONS',
       `Product or category: ${data.get('productCategory') || ''}`,
@@ -290,7 +297,7 @@
       `Email address: ${data.get('email') || ''}`,
       `Phone or WhatsApp: ${data.get('phone') || 'Not provided'}`,
       '',
-      'This preview does not send your request.'
+      'This on-page confirmation does not send your request.'
     ];
     return rows.join('\n');
   }
@@ -342,10 +349,27 @@
     if (currentStep !== 4) { moveForward(); return; }
     if (!validateStep(4)) return;
     renderReview();
+    const showSampleFailure = new URLSearchParams(window.location.search).get('demo-status') === 'failed';
+    successStatus.hidden = showSampleFailure;
+    failureStatus.hidden = !showSampleFailure;
+    retryButton.hidden = !showSampleFailure;
+    preview.hidden = true;
     previewResult.hidden = false;
     previewResult.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
   });
-  form.querySelectorAll('[data-edit]').forEach((button) => button.addEventListener('click', () => setStep(Number(button.dataset.edit))));
+  retryButton.addEventListener('click', () => {
+    const url = new URL(window.location.href);
+    url.searchParams.delete('demo-status');
+    window.history.replaceState({}, '', url);
+    clearPreview();
+    preview.hidden = false;
+    preview.focus();
+  });
+
+  form.querySelectorAll('[data-edit]').forEach((button) => button.addEventListener('click', () => {
+    clearPreview();
+    setStep(Number(button.dataset.edit));
+  }));
 
   copySummaryButton.addEventListener('click', async () => {
     const text = buildSummary();
