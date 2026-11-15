@@ -72,3 +72,7 @@
   .rfq-footer .container{flex-wrap:wrap}.rfq-footer .container>*{flex-basis:calc(50% - 9px)}.rfq-footer .container>p,.rfq-footer .container>a:last-child{text-align:right}
 }
 @media(prefers-reduced-motion:reduce){.rfq-progress__track span,.rfq-field input,.rfq-field textarea,.rfq-field select,.rfq-drop{transition:none}}
+
+/* Keep the RFQ form panel aligned with the left intro column below the fixed header. */
+body.v2-request-page #request .rfq-section{margin-top:clamp(128px,14vw,184px);padding-top:0}
+@media(max-width:767px){body.v2-request-page #request .rfq-section{margin-top:96px}}
