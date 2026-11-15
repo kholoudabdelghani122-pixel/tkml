@@ -6,7 +6,7 @@
 .rfq-intro h1{max-width:12ch;margin:0;font-size:clamp(3rem,7vw,6.4rem);font-weight:600;line-height:.9;letter-spacing:-.075em}
 .rfq-intro h1 span{color:var(--color-orange)}
 .rfq-intro__inner>p:last-child{max-width:54ch;margin:24px 0 0;color:var(--color-muted);font-size:var(--type-lead);line-height:1.55}
-.rfq-section{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:clamp(36px,8vw,120px);align-items:start;padding-bottom:clamp(88px,12vw,160px)}
+.rfq-section{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:clamp(36px,8vw,120px);align-items:start;padding-top:clamp(128px,14vw,184px);padding-bottom:clamp(88px,12vw,160px)}
 .rfq-aside{position:sticky;top:120px;padding-top:8px}
 .rfq-aside h2{max-width:11ch;margin:0;font-size:clamp(2rem,3.4vw,3.25rem);font-weight:500;line-height:.98;letter-spacing:-.065em}
 .rfq-aside>p:not(.rfq-eyebrow){max-width:40ch;margin:20px 0 0;color:var(--color-muted);font-size:var(--type-body);line-height:1.65}
@@ -66,7 +66,7 @@
 .rfq-footer .container{display:flex;align-items:center;justify-content:space-between;gap:18px}.rfq-footer .v2-wordmark--logo{width:94px}.rfq-footer p{margin:0}.rfq-footer>a{color:var(--color-light-grey);text-decoration:none}.rfq-footer>a:hover{color:var(--color-orange)}
 @media(max-width:767px){
   .rfq-intro{padding-top:118px;padding-bottom:38px}.rfq-intro h1{font-size:clamp(3rem,13vw,4.6rem)}
-  .rfq-section{grid-template-columns:1fr;gap:28px;padding-bottom:76px}.rfq-aside{position:static}.rfq-aside h2{max-width:18ch}.rfq-checklist{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;margin-top:20px;font-size:.78rem}
+  .rfq-section{grid-template-columns:1fr;gap:28px;padding-top:96px;padding-bottom:76px}.rfq-aside{position:static}.rfq-aside h2{max-width:18ch}.rfq-checklist{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 14px;margin-top:20px;font-size:.78rem}
   .rfq-panel{padding:20px 16px}.rfq-progress{grid-template-columns:auto 1fr;gap:10px}.rfq-progress__name{grid-column:1/-1;text-align:left}
   .rfq-fields--two{grid-template-columns:1fr}.rfq-field--full,.rfq-upload-field{grid-column:auto}.rfq-review-list{grid-template-columns:1fr}.rfq-review-item--full{grid-column:auto}
   .rfq-footer .container{flex-wrap:wrap}.rfq-footer .container>*{flex-basis:calc(50% - 9px)}.rfq-footer .container>p,.rfq-footer .container>a:last-child{text-align:right}
