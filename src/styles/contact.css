@@ -6,7 +6,7 @@
 .contact-detail{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:center;gap:14px;min-height:78px;padding:13px 0;color:inherit;text-decoration:none;transition:color 180ms ease}
 .contact-detail:hover,.contact-detail:focus-visible{color:var(--color-orange)}
 .contact-detail:focus-visible{outline:2px solid var(--color-orange);outline-offset:4px}
-.contact-detail__icon{display:grid;width:38px;height:38px;place-items:center;border:1px solid rgba(240,91,27,.34);color:var(--color-orange)}
+.contact-detail__icon{display:grid;width:38px;height:38px;place-items:center;border:1px solid rgba(240,91,27,.72);background:rgba(240,91,27,.04);color:var(--color-orange)}
 .contact-detail__icon svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .contact-detail small,.contact-detail strong{display:block}
 .contact-detail small{margin-bottom:5px;color:var(--color-muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
