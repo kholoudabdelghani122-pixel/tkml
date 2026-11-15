@@ -571,3 +571,7 @@
 .v2-faq-accordion .v2-service:not([open])>.v2-service__content{display:none}
 .v2-faq-accordion .v2-service[open]>.v2-service__content{display:grid}
 .v2-faq-accordion .v2-service[open] summary .v2-service__toggle{transform:none}
+
+
+/* Keep the coming-soon page eyebrow's brand casing. */
+.v2-coming-soon-page .v2-coming-soon__content > .v2-footer__eyebrow { text-transform: none; }
