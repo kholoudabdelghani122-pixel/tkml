@@ -33,6 +33,10 @@ Extract this ZIP and open the extracted project folder in Codex. Use this starti
 - Near-black page canvas, off-white headings, muted grey body text.
 - Brand font: Neue Regrade, bundled in `assets/fonts/`.
 
+## Home page design reference
+
+The current Variant 02 homepage is the visual reference for future TKML pages. Its reusable layout, type, palette, gradient continuity, responsive, component, and motion rules are documented in [docs/HOME_PAGE_DESIGN_REFERENCE.md](docs/HOME_PAGE_DESIGN_REFERENCE.md). Use the page as a design-system reference without copying its page-specific copy or repeating its exact section sequence.
+
 ## Current behaviour and limits
 
 The page is static HTML/CSS/JavaScript. Forms prepare a brief locally for copying or downloading; they do not send enquiries, email, or store submissions. I Supply is explicitly a planned product. The 70+ years claim refers to combined team experience.
