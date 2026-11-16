@@ -639,3 +639,9 @@
 .v2-coming-soon__art{position:absolute;z-index:1;right:0;top:0;bottom:0;width:auto;max-width:none;height:100%;object-fit:contain;object-position:right bottom;border:0;background:none;box-shadow:none;border-radius:0;transform:none;transform-origin:right bottom;opacity:.96;filter:none;-webkit-mask-image:linear-gradient(to bottom,#000 48%,rgba(0,0,0,.82) 65%,rgba(0,0,0,.34) 84%,transparent 100%);mask-image:linear-gradient(to bottom,#000 48%,rgba(0,0,0,.82) 65%,rgba(0,0,0,.34) 84%,transparent 100%);pointer-events:none}
 .v2-coming-soon__content{position:relative;z-index:3;width:min(100%,var(--container-max));margin-inline:auto}
 @media(max-width:767px){.v2-coming-soon{min-height:calc(100svh - 64px);padding-block:42px}.v2-coming-soon__art{right:0;top:auto;bottom:0;height:70svh;opacity:.52}.v2-coming-soon__content h1{font-size:clamp(3.4rem,13vw,5.5rem)}}
+
+
+/* Keep the Partners gantry artwork visibly aligned to the hero's top and right edges. */
+@media(min-width:768px){
+  .v2-coming-soon__art{top:0;right:0;bottom:auto;width:min(100vw,177.68svh);height:auto;max-width:none;object-fit:contain;object-position:right top}
+}
