@@ -5,7 +5,7 @@
   const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   const formatDate = value => new Intl.DateTimeFormat("en", { year:"numeric", month:"long", day:"numeric" }).format(new Date(value + "T12:00:00"));
   const slugify = value => value.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-  const card = (article, root) => { const base = new URL(root.dataset.newsBase || "./", location.href); const image = article.featuredImage ? `<img class="news-card__image" src="${escapeHtml(article.featuredImage)}" alt="${escapeHtml(article.featuredImageAlt || article.title)}" loading="lazy">` : ""; return `<a class="news-card" href="${new URL(encodeURIComponent(article.slug) + "/", base).href}">${image}<span class="news-card__top"><span class="news-card__category">${escapeHtml(article.category)}</span><span class="news-card__date">${formatDate(article.date)}</span></span><span class="news-card__title">${escapeHtml(article.title)}</span><span class="news-card__excerpt">${escapeHtml(article.excerpt)}</span><span class="news-card__read">Read article</span></a>`; };
+  const card = (article, root) => { const base = new URL(root.dataset.newsBase || "./", location.href); const image = article.featuredImage ? `<img class="news-card__image" src="${escapeHtml(new URL(article.featuredImage, base).href)}" alt="${escapeHtml(article.featuredImageAlt || article.title)}" loading="lazy">` : ""; return `<a class="news-card" href="${new URL(encodeURIComponent(article.slug) + "/", base).href}">${image}<span class="news-card__top"><span class="news-card__category">${escapeHtml(article.category)}</span><span class="news-card__date">${formatDate(article.date)}</span></span><span class="news-card__title">${escapeHtml(article.title)}</span><span class="news-card__excerpt">${escapeHtml(article.excerpt)}</span><span class="news-card__read">Read article</span></a>`; };
 
   const listing = document.querySelector("[data-news-listing]");
   if (listing) {
@@ -74,7 +74,7 @@
     date.textContent = formatDate(article.date);
     intro.textContent = article.intro.replace(/^Development sample — /, "");
     const featured = articleRoot.querySelector("[data-article-image]");
-    if (article.featuredImage && featured) { featured.hidden = false; featured.innerHTML = `<img src="${escapeHtml(article.featuredImage)}" alt="${escapeHtml(article.featuredImageAlt || article.title)}">`; }
+    if (article.featuredImage && featured) { featured.hidden = false; featured.innerHTML = `<img src="${escapeHtml(new URL(article.featuredImage, new URL(articleRoot.dataset.newsBase || "./", location.href)).href)}" alt="${escapeHtml(article.featuredImageAlt || article.title)}">`; }
     const sections = article.sections.map((section, index) => {
       const id = `${article.slug}-${String(index + 1).padStart(2,"0")}-${slugify(section.heading)}`;
       return { ...section, id, number: index + 1 };
