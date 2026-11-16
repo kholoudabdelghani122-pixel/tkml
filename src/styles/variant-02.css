@@ -641,10 +641,10 @@
 @media(max-width:767px){.v2-coming-soon{min-height:calc(100svh - 64px);padding-block:42px}.v2-coming-soon__art{right:0;top:auto;bottom:0;height:70svh;opacity:.52}.v2-coming-soon__content h1{font-size:clamp(3.4rem,13vw,5.5rem)}}
 
 
-/* Scale and crop the transparent top padding so visible crane artwork reaches the top-right edge.
-   The image box still ends at the hero boundary so its alpha mask fades out before the footer. */
+/* Crop the transparent source padding so the visible crane reaches the top-right viewport edge.
+   Keep the masked image box ending at the hero boundary so the fade still completes before the footer. */
 @media(min-width:768px){
-  .v2-coming-soon__art{top:-30svh;right:0;bottom:auto;width:auto;height:130svh;max-width:none;object-fit:contain;object-position:right bottom}
+  .v2-coming-soon__art{top:-54svh;right:0;bottom:auto;width:auto;height:154svh;max-width:none;object-fit:contain;object-position:right bottom}
 }
 
 /* Match the ending blue glow and warm edge across the home principle-to-footer transition. */
