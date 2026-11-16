@@ -86,6 +86,7 @@ Use the existing wordmark, navigation links, and orange request action. Desktop 
 ### Cards and image treatment
 
 - Choose image crops that support each card’s message. Use edge-to-edge artwork only when intended by the specific composition.
+- For edge-bleed hero artwork, align the visible image to the viewport’s top and right edges when the composition calls for it. Preserve the intended image size and crop by positioning the image area rather than scaling the artwork to force contact; account for transparent padding in the source image. Keep any bottom fade into the page background, and scope desktop and mobile positioning separately when their compositions differ.
 - Keep labels and titles on stable layers above images. Add contrast overlays only where text needs them; do not put a blanket dark overlay over artwork that should remain clear.
 - Use a consistent frame, border treatment, and content spacing across cards within the same group.
 - On hover-capable devices, keep interactions subtle and scoped to the artwork or a specific inner element. Touch layouts should remain clear without hover.
