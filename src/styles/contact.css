@@ -1,4 +1,4 @@
-.v2-contact-page #contact .rfq-section{margin-top:clamp(128px,14vw,184px);padding-top:0}
+.v2-contact-page #contact .rfq-section{margin-top:0;padding-top:0}
 .v2-contact-page #contact .contact-aside .rfq-eyebrow{text-transform:none}
 .contact-aside{top:120px}
 .v2-contact-page #contact .contact-aside h1{max-width:11ch;margin:0;font-size:clamp(2rem,3.4vw,3.25rem);font-weight:500;line-height:.98;letter-spacing:-.065em}
@@ -19,14 +19,16 @@
 .contact-form__status{margin-top:16px;padding:14px 16px;border-left:2px solid var(--color-orange);background:rgba(240,91,27,.08);color:var(--color-light-grey);font-size:.86rem;line-height:1.55}
 .contact-form__status[hidden]{display:none!important}
 @media(max-width:767px){
- .v2-contact-page #contact .rfq-section{margin-top:96px;padding-top:0}
- .v2-contact-page #contact .contact-aside{top:auto}
+ .v2-contact-page #contact .rfq-section{margin-top:0;padding-top:0}
+ .v2-contact-page #contact .contact-aside{top:auto;position:static}
  .contact-details{margin-top:24px}
  .contact-detail{min-height:70px}
  .contact-panel{padding:20px 16px}
 }
 @media(prefers-reduced-motion:reduce){.contact-detail{transition:none}}
 
-/* Keep the anchored contact section clear of the fixed navigation. */
-body.v2-contact-page main#contact{scroll-margin-top:120px}
-@media(max-width:767px){body.v2-contact-page main#contact{scroll-margin-top:96px}}
+
+/* Keep both contact columns below the fixed navigation, including direct #contact visits. */
+body.v2-contact-page main#contact{padding-top:clamp(128px,14vw,184px)}
+body.v2-contact-page main#contact .contact-aside{position:static;top:auto}
+@media(max-width:767px){body.v2-contact-page main#contact{padding-top:96px}}
