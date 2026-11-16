@@ -1,4 +1,6 @@
 .news-site{min-height:100vh;background:radial-gradient(ellipse at 88% 15%,rgba(240,91,27,.14),transparent 34%),radial-gradient(ellipse at 10% 55%,rgba(35,91,102,.18),transparent 38%),#091318;color:var(--color-white)}
+/* Continue the subtle warm glow into the existing footer without changing the footer itself. */
+.v2-news-page .news-main{background-image:radial-gradient(ellipse 115% 150% at 0% 100%,rgba(240,91,27,.065),transparent 88%)}
 .news-main{padding-top:clamp(132px,17vh,190px);padding-bottom:clamp(76px,10vw,132px)}
 .news-heading{max-width:980px;margin-bottom:clamp(28px,4vw,48px)}
 .news-eyebrow{margin:0 0 18px;color:var(--color-orange);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
