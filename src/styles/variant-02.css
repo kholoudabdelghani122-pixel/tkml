@@ -655,3 +655,7 @@
 .v2-isupply__card--sourcing::after{display:none}
 .v2-isupply__card-image{position:absolute;z-index:0;right:-3%;bottom:-5%;width:106%;height:106%;object-fit:contain;object-position:right bottom;pointer-events:none}
 .v2-isupply__card--sourcing h3{position:relative;z-index:2}
+
+/* I Supply communication visual: radio coordination. */
+.v2-isupply__card--communication::after{display:none}
+.v2-isupply__card-image--communication{right:-4%;bottom:-7%;width:112%;height:94%;object-fit:contain;object-position:right bottom}
