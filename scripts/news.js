@@ -14,7 +14,6 @@
     const grid = listing.querySelector("[data-news-grid]");
     const count = listing.querySelector("[data-news-count]");
     const empty = listing.querySelector("[data-news-empty]");
-    const clear = listing.querySelector("[data-news-clear]");
     const categories = ["All", ...new Set(articles.map(article => article.category))];
     let activeCategory = "All";
     filters.innerHTML = categories.map((category, index) => `<button type="button" class="news-filter${index === 0 ? " is-active" : ""}" data-category="${escapeHtml(category)}" aria-pressed="${index === 0}">${escapeHtml(category)}</button>`).join("");
@@ -41,17 +40,6 @@
       update();
     });
     search.addEventListener("input", update);
-    clear.addEventListener("click", () => {
-      activeCategory = "All";
-      search.value = "";
-      filters.querySelectorAll("[data-category]").forEach((item, index) => {
-        const selected = index === 0;
-        item.classList.toggle("is-active", selected);
-        item.setAttribute("aria-pressed", String(selected));
-      });
-      update();
-      search.focus();
-    });
     update();
   }
 
