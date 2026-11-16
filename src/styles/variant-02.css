@@ -646,9 +646,9 @@
   .v2-coming-soon__art{top:0;right:0;bottom:auto;width:min(100vw,177.68svh);height:auto;max-width:none;object-fit:contain;object-position:right top}
 }
 
-/* Match the principle-to-footer glow on the home page for a softer section handoff. */
+/* Match the ending blue glow and warm edge across the home principle-to-footer transition. */
 .v2-home-page .v2-principle{background-image:radial-gradient(ellipse 115% 150% at 0% 100%,rgba(240,91,27,.065),transparent 88%)}
-.v2-home-page .v2-footer{background-image:radial-gradient(ellipse 115% 150% at 0% 0%,rgba(240,91,27,.065),transparent 88%)}
+.v2-home-page .v2-footer{background-image:radial-gradient(ellipse 115% 150% at 0% 0%,rgba(240,91,27,.065),transparent 88%),radial-gradient(ellipse 52% 120% at 25% -62%,rgba(187,241,255,.1),transparent 78%)}
 
 /* I Supply focus visual: supplier samples and barcode verification. */
 .v2-isupply__card--sourcing::before{position:absolute;z-index:1;inset:0;content:"";background:linear-gradient(180deg,rgba(9,19,24,.04) 0%,rgba(9,19,24,.02) 42%,rgba(9,19,24,.8) 100%);pointer-events:none}
