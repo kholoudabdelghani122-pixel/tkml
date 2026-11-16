@@ -81,9 +81,11 @@
 @media(prefers-reduced-motion:reduce){.rfq-progress__track span,.rfq-field input,.rfq-field textarea,.rfq-field select,.rfq-drop{transition:none}}
 
 /* Keep the RFQ form panel aligned with the left intro column below the fixed header. */
-body.v2-request-page #request .rfq-section{margin-top:clamp(128px,14vw,184px);padding-top:0}
-@media(max-width:767px){body.v2-request-page #request .rfq-section{margin-top:96px}}
+body.v2-request-page #request .rfq-section{margin-top:0;padding-top:0}
+@media(max-width:767px){body.v2-request-page #request .rfq-section{margin-top:0}}
 
-/* Keep the anchored form section clear of the fixed navigation. */
-body.v2-request-page main#request{scroll-margin-top:120px}
-@media(max-width:767px){body.v2-request-page main#request{scroll-margin-top:96px}}
+
+/* Keep the RFQ columns below the fixed navigation, including direct #request visits. */
+body.v2-request-page main#request{padding-top:clamp(128px,14vw,184px)}
+body.v2-request-page main#request .rfq-aside{position:static;top:auto}
+@media(max-width:767px){body.v2-request-page main#request{padding-top:96px}}
