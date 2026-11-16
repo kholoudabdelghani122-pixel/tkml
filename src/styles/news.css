@@ -12,13 +12,12 @@
 .news-search label{font-size:.8rem;color:var(--color-light-grey)}
 .news-search input{width:100%;min-height:52px;padding:14px 16px;border:1px solid rgba(187,241,255,.2);border-radius:0;background:rgba(0,0,0,.26);color:var(--color-white);font:inherit}
 .news-search input::placeholder{color:var(--color-muted)}
-.news-search input:focus-visible,.news-filter:focus-visible,.news-clear:focus-visible,.news-card:focus-visible,.news-toc__link:focus-visible,.news-back:focus-visible{outline:2px solid var(--color-orange);outline-offset:3px}
+.news-search input:focus-visible,.news-filter:focus-visible,.news-card:focus-visible,.news-toc__link:focus-visible,.news-back:focus-visible{outline:2px solid var(--color-orange);outline-offset:3px}
 .news-filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
-.news-filter,.news-clear{min-height:40px;padding:9px 14px;border:1px solid rgba(187,241,255,.18);border-radius:0;background:transparent;color:var(--color-light-grey);font:inherit;font-size:.82rem;cursor:pointer;transition:color .18s ease,border-color .18s ease,background .18s ease}
+.news-filter{min-height:40px;padding:9px 14px;border:1px solid rgba(187,241,255,.18);border-radius:0;background:transparent;color:var(--color-light-grey);font:inherit;font-size:.82rem;cursor:pointer;transition:color .18s ease,border-color .18s ease,background .18s ease}
 .news-filter:hover,.news-filter.is-active{border-color:var(--color-orange);color:var(--color-white)}
 .news-filter.is-active{background:rgba(240,91,27,.14)}
-.news-count-row{display:flex;align-items:center;justify-content:space-between;min-height:34px;margin:0 0 18px;color:var(--color-muted);font-size:.82rem}
-.news-clear{min-height:32px;padding:5px 10px;color:var(--color-light-grey)}
+.news-count-row{display:flex;align-items:center;min-height:34px;margin:0 0 18px;color:var(--color-muted);font-size:.82rem}
 .news-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
 .news-card{position:relative;display:flex;min-height:270px;flex-direction:column;gap:18px;padding:clamp(20px,2.2vw,30px);overflow:hidden;border:1px solid rgba(187,241,255,.17);background:linear-gradient(140deg,rgba(13,28,34,.96),rgba(12,14,15,.94) 62%,rgba(71,34,20,.58));color:var(--color-white);text-decoration:none;transition:border-color .2s ease,background-color .2s ease}
 .news-card::before{content:"";position:absolute;inset:0 auto 0 0;width:2px;background:var(--color-orange);transform:scaleY(0);transform-origin:bottom;transition:transform .25s ease}
