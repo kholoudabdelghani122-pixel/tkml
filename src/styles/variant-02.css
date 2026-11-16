@@ -659,3 +659,7 @@
 /* I Supply communication visual: radio coordination. */
 .v2-isupply__card--communication::after{display:none}
 .v2-isupply__card-image--communication{right:-4%;bottom:-7%;width:112%;height:94%;object-fit:contain;object-position:right bottom}
+
+/* I Supply negotiation visual: reviewing commercial terms together. */
+.v2-isupply__card--negotiation::after{display:none}
+.v2-isupply__card-image--negotiation{right:-5%;bottom:-9%;width:112%;height:94%;object-fit:contain;object-position:right bottom}
