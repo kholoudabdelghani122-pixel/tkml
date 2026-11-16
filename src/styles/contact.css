@@ -26,3 +26,7 @@
  .contact-panel{padding:20px 16px}
 }
 @media(prefers-reduced-motion:reduce){.contact-detail{transition:none}}
+
+/* Keep the anchored contact section clear of the fixed navigation. */
+body.v2-contact-page main#contact{scroll-margin-top:120px}
+@media(max-width:767px){body.v2-contact-page main#contact{scroll-margin-top:96px}}
