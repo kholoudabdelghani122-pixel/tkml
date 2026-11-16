@@ -5,7 +5,7 @@
   const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, char => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[char]));
   const formatDate = value => new Intl.DateTimeFormat("en", { year:"numeric", month:"long", day:"numeric" }).format(new Date(value + "T12:00:00"));
   const slugify = value => value.toLowerCase().normalize("NFKD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-  const card = article => `<a class="news-card" href="./${encodeURIComponent(article.slug)}/"><span class="news-card__top"><span class="news-card__category">${escapeHtml(article.category)}</span><span class="news-card__date">${formatDate(article.date)}</span></span><span class="news-card__title">${escapeHtml(article.title)}</span><span class="news-card__excerpt">${escapeHtml(article.excerpt)}</span><span class="news-card__read">Read article</span></a>`;
+  const card = (article, root) => { const base = new URL(root.dataset.newsBase || "./", location.href); return `<a class="news-card" href="${new URL(encodeURIComponent(article.slug) + "/", base).href}"><span class="news-card__top"><span class="news-card__category">${escapeHtml(article.category)}</span><span class="news-card__date">${formatDate(article.date)}</span></span><span class="news-card__title">${escapeHtml(article.title)}</span><span class="news-card__excerpt">${escapeHtml(article.excerpt)}</span><span class="news-card__read">Read article</span></a>`; };
 
   const listing = document.querySelector("[data-news-listing]");
   if (listing) {
@@ -25,7 +25,7 @@
         (!query || article.title.toLocaleLowerCase().includes(query) || article.excerpt.toLocaleLowerCase().includes(query))
       );
       count.textContent = `${visible.length} ${visible.length === 1 ? "article" : "articles"}`;
-      grid.innerHTML = visible.map(card).join("");
+      grid.innerHTML = visible.map(article => card(article, listing)).join("");
       empty.hidden = visible.length > 0;
       grid.hidden = visible.length === 0;
     };
@@ -83,7 +83,7 @@
     const relatedSection = document.querySelector("[data-related-section]");
     const relatedGrid = document.querySelector("[data-related-grid]");
     relatedSection.hidden = related.length === 0;
-    relatedGrid.innerHTML = related.map(card).join("");
+    relatedGrid.innerHTML = related.map(item => card(item, articleRoot)).join("");
     document.title = `${article.title} — tkml News`;
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = article.excerpt;
