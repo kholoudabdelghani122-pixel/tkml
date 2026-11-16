@@ -676,4 +676,5 @@
 
 
 /* Let the Partners hero reveal the existing page gradient at its lower edge. The footer background stays unchanged. */
-.v2-coming-soon-page .v2-coming-soon::after{background:radial-gradient(ellipse 88% 80% at 0% 100%,rgba(240,91,27,.1),transparent 78%),linear-gradient(to bottom,transparent 0%,rgba(9,19,24,.3) 28%,rgba(9,19,24,.56) 58%,rgba(9,19,24,.26) 82%,transparent 100%)}
+.v2-coming-soon-page .v2-coming-soon::after{background:linear-gradient(to bottom,transparent 0%,rgba(9,19,24,.3) 28%,rgba(9,19,24,.56) 58%,rgba(9,19,24,.26) 82%,transparent 100%)}
+.v2-coming-soon-page .v2-coming-soon__art{-webkit-mask-image:linear-gradient(to bottom,#000 38%,rgba(0,0,0,.82) 58%,rgba(0,0,0,.36) 82%,transparent 100%);mask-image:linear-gradient(to bottom,#000 38%,rgba(0,0,0,.82) 58%,rgba(0,0,0,.36) 82%,transparent 100%)}
