@@ -83,3 +83,7 @@
 /* Keep the RFQ form panel aligned with the left intro column below the fixed header. */
 body.v2-request-page #request .rfq-section{margin-top:clamp(128px,14vw,184px);padding-top:0}
 @media(max-width:767px){body.v2-request-page #request .rfq-section{margin-top:96px}}
+
+/* Keep the anchored form section clear of the fixed navigation. */
+body.v2-request-page main#request{scroll-margin-top:120px}
+@media(max-width:767px){body.v2-request-page main#request{scroll-margin-top:96px}}
