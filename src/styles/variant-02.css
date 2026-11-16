@@ -644,7 +644,7 @@
 /* Crop the transparent source padding so the visible crane reaches the top-right viewport edge.
    Keep the masked image box ending at the hero boundary so the fade still completes before the footer. */
 @media(min-width:768px){
-  .v2-coming-soon__art{top:-54svh;right:0;bottom:auto;width:auto;height:154svh;max-width:none;object-fit:contain;object-position:right bottom}
+  .v2-coming-soon__art{top:-54svh;right:-15vw;bottom:auto;width:auto;height:154svh;max-width:none;object-fit:contain;object-position:right bottom}
 }
 
 /* Match the ending blue glow and warm edge across the home principle-to-footer transition. */
