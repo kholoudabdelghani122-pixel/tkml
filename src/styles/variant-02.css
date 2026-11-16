@@ -673,3 +673,7 @@
 .v2-isupply__card--rfq::after{display:none}
 .v2-isupply__card-image--rfq{right:-4%;bottom:-7%;width:110%;height:94%;object-fit:contain;object-position:right bottom}
 .v2-isupply__card--rfq h3{position:relative;z-index:2}
+
+
+/* Let the Partners hero reveal the existing page gradient at its lower edge. The footer background stays unchanged. */
+.v2-coming-soon-page .v2-coming-soon::after{background:radial-gradient(ellipse 88% 80% at 0% 100%,rgba(240,91,27,.1),transparent 78%),linear-gradient(to bottom,transparent 0%,rgba(9,19,24,.3) 28%,rgba(9,19,24,.56) 58%,rgba(9,19,24,.26) 82%,transparent 100%)}
