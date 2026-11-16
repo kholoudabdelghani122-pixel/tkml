@@ -668,3 +668,8 @@
 .v2-isupply__card--procurement::after{display:none}
 .v2-isupply__card-image--procurement{right:-8%;bottom:-6%;width:124%;height:92%;object-fit:contain;object-position:right bottom}
 .v2-isupply__card--procurement h3{position:relative;z-index:2}
+
+/* I Supply quotation visual: RFQ documents organized for comparison. */
+.v2-isupply__card--rfq::after{display:none}
+.v2-isupply__card-image--rfq{right:-4%;bottom:-7%;width:110%;height:94%;object-fit:contain;object-position:right bottom}
+.v2-isupply__card--rfq h3{position:relative;z-index:2}
