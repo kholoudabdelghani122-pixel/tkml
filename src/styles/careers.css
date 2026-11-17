@@ -45,3 +45,9 @@
  .careers-page__roles-layout{gap:26px}
 }
 @media(prefers-reduced-motion:reduce){.careers-page *{scroll-behavior:auto!important;transition:none!important}}
+
+.careers-page__role-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}
+.careers-page__role-label{flex:none;padding:5px 8px;border:1px solid rgba(240,91,27,.42);color:var(--color-orange);font-size:.68rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;line-height:1.2}
+.careers-page__role-meta{margin:0 0 12px;color:var(--color-muted);font-size:.82rem}
+.careers-page__role>p:last-child{max-width:64ch;margin:0}
+@media(max-width:480px){.careers-page__role-heading{gap:10px}.careers-page__role h3{font-size:1.15rem}}
