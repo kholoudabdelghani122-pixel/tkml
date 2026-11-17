@@ -690,3 +690,9 @@
 
 /* Keep I Supply focus artwork clear of each card's lower edge. */
 .v2-isupply__card .v2-isupply__card-image{bottom:4%}
+
+
+/* On mobile, align the Partners artwork's top edge with the top of the hero. */
+@media(max-width:767px){
+  .v2-coming-soon-page .v2-coming-soon__art{top:0;right:-4vw;bottom:auto;height:112svh;object-fit:contain;object-position:right top}
+}
