@@ -1,4 +1,4 @@
-.v2-request-page{min-height:100vh;background:radial-gradient(ellipse 72% 35% at 88% 4%,rgba(240,91,27,.14),transparent 72%),linear-gradient(160deg,#091318 0%,var(--color-navy) 48%,#091318 100%)}
+.v2-request-page{min-height:100vh;background:radial-gradient(ellipse 76% 72% at 10% 14%,rgba(187,241,255,.13),transparent 76%),radial-gradient(ellipse 68% 54% at 88% 48%,rgba(240,91,27,.12),transparent 74%),radial-gradient(ellipse 84% 44% at 8% 92%,rgba(240,91,27,.09),transparent 78%),linear-gradient(135deg,#091318 0%,#0D1C22 52%,#091318 100%);background-attachment:fixed}
 .v2-request-page .v2-header.is-scrolled{background:rgba(13,28,34,.88)}
 .rfq-intro{padding-top:clamp(150px,18vw,225px);padding-bottom:clamp(48px,7vw,92px)}
 .rfq-intro__inner{max-width:var(--container-max)}
