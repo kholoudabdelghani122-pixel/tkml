@@ -1,6 +1,4 @@
-.news-site{min-height:100vh;background:radial-gradient(ellipse at 88% 15%,rgba(240,91,27,.14),transparent 34%),radial-gradient(ellipse at 10% 55%,rgba(35,91,102,.18),transparent 38%),#091318;color:var(--color-white)}
-/* Continue the subtle warm glow into the existing footer without changing the footer itself. */
-.v2-news-page .news-main{background-image:radial-gradient(ellipse 115% 150% at 0% 100%,rgba(240,91,27,.065),transparent 88%)}
+.news-site{min-height:100vh;color:var(--color-white);background-color:#091318;background-image:radial-gradient(ellipse 85% 35% at 0% 10%,rgba(187,241,255,.08),transparent 78%),radial-gradient(ellipse 95% 38% at 100% 46%,rgba(240,91,27,.12),transparent 82%),radial-gradient(ellipse 90% 30% at 0% 86%,rgba(240,91,27,.07),transparent 80%),linear-gradient(120deg,#05090b 0%,#091318 48%,#05090b 100%);background-repeat:no-repeat;background-size:100% 100%}
 .news-main{padding-top:clamp(132px,17vh,190px);padding-bottom:clamp(76px,10vw,132px)}
 .news-heading{max-width:980px;margin-bottom:clamp(28px,4vw,48px)}
 .news-eyebrow{margin:0 0 18px;color:var(--color-orange);font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
