@@ -422,7 +422,7 @@
   .v2-footer__panel--main h2{margin:68px 0 48px;text-align:left;font-size:clamp(2.8rem,11vw,4.3rem)}
   .v2-footer__panel--contact{align-items:center;text-align:center;padding-block:34px}
   .v2-footer__panel--contact .v2-footer__eyebrow,.v2-footer__panel--contact h2{align-self:flex-start;text-align:left}.v2-footer__panel--contact h2{margin:34px 0 18px;font-size:clamp(2.8rem,11vw,4.3rem)}
-  .v2-footer__contact-copy{font-size:1rem}
+  .v2-footer__contact-copy{width:100%;align-self:flex-start;text-align:left;font-size:1rem}
   .v2-footer__contact-links{text-align:left}
   .v2-footer__socials{justify-content:center;gap:16px}
   .v2-footer__link-groups{grid-template-columns:1fr 1fr;text-align:left}
