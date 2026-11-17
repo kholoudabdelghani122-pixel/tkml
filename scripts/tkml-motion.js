@@ -446,11 +446,11 @@ const initializeTKMLMotion = function () {
   if (requestFlow) {
     const steps = [
       ['Send a request.', 'Share what you need, your specifications, priorities, and target timing.'],
-      ['Screen potential suppliers.', 'TKML checks the request and identifies suppliers whose capabilities fit the scope.'],
-      ['Coordinate quotations.', 'TKML requests offers from potential suppliers and clarifies details such as price basis, lead time, and terms.'],
-      ['Review organized quotations.', 'TKML organizes the offers so you can review them and agree on the next step.']
+      ['Screen potential suppliers.', 'tkml checks the request and identifies suppliers whose capabilities fit the scope.'],
+      ['Coordinate quotations.', 'tkml requests offers from potential suppliers and clarifies details such as price basis, lead time, and terms.'],
+      ['Review organized quotations.', 'tkml organizes the offers so you can review them and agree on the next step.']
     ];
-    const overview = ['From request to quotations', 'You share a request. TKML screens potential suppliers, coordinates quotations, and sends the organized offers back to you.'];
+    const overview = ['From request to quotations', 'You share a request. tkml screens potential suppliers, coordinates quotations, and sends the organized offers back to you.'];
     const controls = requestFlow.querySelector('.v2-request-flow__controls');
     const detail = requestFlow.querySelector('.v2-request-flow__details');
     const detailTitle = requestFlow.querySelector('.v2-request-flow__detail-title');
