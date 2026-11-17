@@ -30,6 +30,8 @@ jobs:
           cp scripts/contact.js dist/scripts/
           cp scripts/news-data.js dist/scripts/
           cp scripts/news.js dist/scripts/
+          cp scripts/news-data-ar.js dist/scripts/
+          cp scripts/news-ar.js dist/scripts/
           cp -R assets/images dist/assets/
           cp -R assets/fonts dist/assets/
       - uses: actions/upload-pages-artifact@v3
