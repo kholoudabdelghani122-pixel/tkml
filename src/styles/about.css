@@ -23,6 +23,7 @@
 .about-page__standards-heading h2{max-width:9ch}
 .about-page__standards-heading h2 span,.about-page__founder h2 span{color:var(--color-orange)}
 .about-page__standards-copy{max-width:68ch;padding-top:40px}
+.about-page__standards-copy>.about-page__eyebrow{text-transform:none;letter-spacing:normal}
 .about-page__standards-copy p+p{margin-top:22px}
 .about-page__founder{padding-block:clamp(72px,9vw,130px);background:transparent}
 .about-page__founder-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(320px,1fr);gap:clamp(44px,9vw,136px);align-items:start}
