@@ -697,3 +697,7 @@
   .v2-coming-soon-page .v2-coming-soon__art{top:-29svh;right:-4vw;bottom:auto;height:112svh;object-fit:contain;object-position:right top}
   .v2-coming-soon-page .v2-coming-soon__content{transform:translateY(5svh)}
 }
+
+
+/* Keep the Supplier & Buyer Communication heading above its artwork. */
+.v2-isupply__card--communication h3{position:relative;z-index:2}
