@@ -27,6 +27,7 @@ jobs:
           cp -R src/styles dist/src/
           cp scripts/tkml-motion.js dist/scripts/
           cp scripts/request-sourcing.js dist/scripts/
+          cp scripts/request-sourcing-ar.js dist/scripts/
           cp scripts/contact.js dist/scripts/
           cp scripts/news-data.js dist/scripts/
           cp scripts/news.js dist/scripts/
