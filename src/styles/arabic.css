@@ -131,7 +131,15 @@ html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__image {
 
 html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--sourcing .v2-mosaic__image {
   inset: auto auto 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   object-position: left bottom;
+}
+
+/* Keep the mirrored sourcing artwork visible on the left and reserve the darker overlay for the copy on the right. */
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--sourcing::after {
+  background: linear-gradient(270deg, rgba(13, 28, 34, .88) 0%, rgba(13, 28, 34, .66) 34%, rgba(13, 28, 34, .18) 68%, transparent 88%);
 }
 
 html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--suppliers .v2-mosaic__image--suppliers,
