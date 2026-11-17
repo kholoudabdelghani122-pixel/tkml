@@ -621,8 +621,8 @@
   .v2-isupply__story-grid{grid-template-columns:1fr;gap:26px}
   .v2-isupply__story-copy{justify-self:start}
   .v2-isupply__focus{padding:40px 0 66px}
-  .v2-isupply__grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-  .v2-isupply__card,.v2-isupply__card--wide{grid-column:span 1;min-height:240px;padding:20px}
+  .v2-isupply__grid{grid-template-columns:minmax(0,1fr);gap:8px}
+  .v2-isupply__card,.v2-isupply__card--wide{grid-column:1 / -1;min-height:240px;padding:20px}
   .v2-isupply__card:last-child{grid-column:1 / -1;min-height:205px}
   .v2-isupply__card h3{font-size:clamp(1.35rem,5.4vw,2rem)}
   .v2-isupply__status{padding:48px 0 72px}
