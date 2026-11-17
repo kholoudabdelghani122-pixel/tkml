@@ -8,7 +8,7 @@
     if (!form.reportValidity()) return;
 
     const values = new FormData(form);
-    const subject = `TKML enquiry — ${values.get("topic") || "General enquiry"}`;
+    const subject = `tkml enquiry — ${values.get("topic") || "General enquiry"}`;
     const body = [
       `Name: ${values.get("name")}`,
       `Company: ${values.get("company") || "Not provided"}`,
