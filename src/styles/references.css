@@ -43,7 +43,7 @@
 .work-reference__ring span:nth-child(2){--segment-turn:120deg}
 .work-reference__ring span:nth-child(3){--segment-turn:240deg}
 .work-reference__milestone-layout[data-active="0"] .work-reference__ring span:nth-child(1),.work-reference__milestone-layout[data-active="1"] .work-reference__ring span:nth-child(2),.work-reference__milestone-layout[data-active="2"] .work-reference__ring span:nth-child(3){background:conic-gradient(from -60deg,transparent 2deg,var(--color-orange) 2deg 113deg,transparent 113deg);transform:rotate(var(--segment-turn)) scale(1.08);filter:drop-shadow(0 0 7px rgba(240,91,27,.28))}
-.work-reference__ring b{color:var(--color-light-grey);font-size:1.05rem;font-weight:500}
+.work-reference__ring-arrow{display:grid;place-items:center;color:var(--color-light-grey)}.work-reference__ring-arrow svg{display:block;width:18px;height:18px;overflow:visible}.work-reference__ring-arrow path{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .work-reference__milestone-labels{display:grid;gap:4px}
 .work-reference__milestone-mark{min-height:34px;padding-inline:6px;text-align:center;white-space:nowrap}
 .work-reference__milestone-mark[data-active]{background:rgba(240,91,27,.18);color:var(--color-white)}
