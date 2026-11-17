@@ -251,7 +251,7 @@
 .v2-hero h1 span{display:block;padding-left:var(--v2-hero-indent);font-size:.9em;color:var(--color-orange)}
 .v2-hero h1 .v2-title-mask{display:block;overflow:visible;padding:0;margin:0;font-size:1em;color:inherit}
 .v2-hero h1 .v2-title-line{display:block;padding-left:0;font-size:1em;color:var(--color-white);will-change:transform,clip-path}
-.v2-hero h1 .v2-title-line--last{padding-left:var(--v2-hero-indent);font-size:.9em;color:var(--color-orange)}
+.v2-hero h1 .v2-title-line--last{padding-left:var(--v2-hero-indent);font-size:.9em;color:var(--color-orange)}.v2-hero h1 .v2-title-line--last .v2-mobile-break{display:none}
 .v2-hero__lead{max-width:42ch;margin:0 0 22px var(--v2-hero-indent);color:var(--color-light-grey);font-size:var(--type-lead);line-height:1.45}
 .v2-actions{margin:0 0 0 var(--v2-hero-indent);gap:12px}
 .v2-actions .button--outline{background:rgba(255,255,255,.05)}
@@ -322,7 +322,7 @@
   .v2-hero h1{font-size:clamp(3rem,11vw,4.8rem);line-height:.9;margin-bottom:36px}
   .v2-hero h1 span{padding-left:5vw;font-size:.9em}
   .v2-hero h1 .v2-title-mask{padding-left:0;font-size:1em}
-  .v2-hero h1 .v2-title-line--last{padding-left:5vw;font-size:.9em}
+  .v2-hero h1 .v2-title-line--last{padding-left:5vw;font-size:.9em}.v2-hero h1 .v2-title-line--last .v2-mobile-break{display:block}
   .v2-hero__lead{max-width:38ch;margin-bottom:20px;font-size:1rem}
   .v2-actions{gap:9px}
   .v2-actions .button{min-height:46px;padding:11px 13px;font-size:.84rem}
