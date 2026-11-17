@@ -738,3 +738,11 @@
   .v2-header .v2-language-switch--desktop{display:none}
   .v2-mobile-nav nav .v2-language-switch--mobile{display:block;margin:0;padding:12px 0}
 }
+
+/* Keep the desktop language switch adjacent to the sourcing CTA. */
+@media(min-width:768px){
+  .v2-header .site-header__inner{display:grid;grid-template-columns:auto minmax(0,1fr) auto auto;column-gap:clamp(12px,1.5vw,20px)}
+  .v2-header .site-nav{justify-self:center}
+  .v2-header .v2-language-switch--desktop{justify-self:end;white-space:nowrap}
+  .v2-header .v2-header-cta{justify-self:end;white-space:nowrap}
+}
