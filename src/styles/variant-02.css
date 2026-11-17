@@ -578,13 +578,11 @@
 
 
 /* Let the coming-soon hero gradient flow into its footer. */
-.v2-coming-soon-page .v2-footer { background: transparent; }
 
 
 /* I Supply page layout */
 .v2-isupply-page{min-height:100vh;background:var(--gradient-page-canvas,radial-gradient(ellipse 76% 72% at 10% 14%,rgba(187,241,255,.13),transparent 76%),radial-gradient(ellipse 68% 54% at 88% 48%,rgba(240,91,27,.12),transparent 74%),radial-gradient(ellipse 84% 44% at 8% 92%,rgba(240,91,27,.09),transparent 78%),linear-gradient(135deg,#091318 0%,#0D1C22 52%,#091318 100%));background-attachment:fixed}
 .v2-isupply{overflow:hidden;background:transparent}
-.v2-isupply-page .v2-footer{background:transparent}
 .v2-isupply__hero{padding:clamp(150px,17vw,232px) 0 clamp(66px,8vw,112px)}
 .v2-isupply__eyebrow{margin:0 0 18px;color:var(--color-orange);font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
 .v2-isupply__hero h1{max-width:18ch;margin:0;font-size:clamp(3.2rem,7.2vw,7.5rem);font-weight:600;line-height:.91;letter-spacing:-.075em}
@@ -647,9 +645,8 @@
   .v2-coming-soon__art{top:-30svh;right:0;bottom:auto;width:auto;height:130svh;max-width:none;object-fit:contain;object-position:right bottom}
 }
 
-/* Match the ending blue glow and warm edge across the home principle-to-footer transition. */
-.v2-home-page .v2-principle{background-image:radial-gradient(ellipse 115% 150% at 0% 100%,rgba(240,91,27,.065),transparent 88%),radial-gradient(ellipse 52% 120% at 25% 162%,rgba(187,241,255,.1),transparent 78%)}
-.v2-home-page .v2-footer{background-image:radial-gradient(ellipse 115% 150% at 0% 0%,rgba(240,91,27,.065),transparent 88%),radial-gradient(ellipse 52% 120% at 25% -62%,rgba(187,241,255,.1),transparent 78%)}
+/* Let the home page’s final section resolve into the shared footer canvas. */
+.v2-home-page .v2-principle{background-image:linear-gradient(to bottom,transparent 0%,rgba(9,19,24,.24) 64%,#091318 100%),radial-gradient(ellipse 88% 80% at 0% 100%,rgba(240,91,27,.1),transparent 78%)}
 
 /* I Supply focus visual: supplier samples and barcode verification. */
 .v2-isupply__card--sourcing::before{position:absolute;z-index:1;inset:0;content:"";background:linear-gradient(180deg,rgba(9,19,24,.04) 0%,rgba(9,19,24,.02) 42%,rgba(9,19,24,.8) 100%);pointer-events:none}
