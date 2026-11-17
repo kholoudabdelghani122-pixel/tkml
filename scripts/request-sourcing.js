@@ -273,7 +273,7 @@
   function buildSummary() {
     const data = new FormData(form);
     const rows = [
-      'TKML Systems — Sourcing request',
+      'tkml Systems — Sourcing request',
       '',
       'PRODUCT & SPECIFICATIONS',
       `Product or category: ${data.get('productCategory') || ''}`,
