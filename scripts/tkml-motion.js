@@ -444,13 +444,21 @@ const initializeTKMLMotion = function () {
 
   const requestFlow = document.querySelector('.v2-request-flow');
   if (requestFlow) {
-    const steps = [
+    const isArabicPage = document.body.classList.contains('v2-home-page--ar');
+    const steps = isArabicPage ? [
+      ['أرسل طلبًا.', 'شارك احتياجك ومواصفاتك وأولوياتك والموعد المستهدف.'],
+      ['افحص المورّدين المحتملين.', 'تراجع tkml الطلب وتحدّد المورّدين الذين تتوافق قدراتهم مع نطاقه.'],
+      ['نسّق عروض الأسعار.', 'تطلب tkml العروض من المورّدين المحتملين وتوضّح أساس السعر ومدة التوريد والشروط.'],
+      ['راجع عروض الأسعار المنظّمة.', 'تنظّم tkml العروض لتتمكن من مراجعتها والاتفاق على الخطوة التالية.']
+    ] : [
       ['Send a request.', 'Share what you need, your specifications, priorities, and target timing.'],
       ['Screen potential suppliers.', 'tkml checks the request and identifies suppliers whose capabilities fit the scope.'],
       ['Coordinate quotations.', 'tkml requests offers from potential suppliers and clarifies details such as price basis, lead time, and terms.'],
       ['Review organized quotations.', 'tkml organizes the offers so you can review them and agree on the next step.']
     ];
-    const overview = ['From request to quotations', 'You share a request. tkml screens potential suppliers, coordinates quotations, and sends the organized offers back to you.'];
+    const overview = isArabicPage
+      ? ['من الطلب إلى عروض الأسعار', 'تشارك طلبك، فتفحص tkml المورّدين المحتملين وتنسّق عروض الأسعار ثم تعيد إليك العروض منظّمة.']
+      : ['From request to quotations', 'You share a request. tkml screens potential suppliers, coordinates quotations, and sends the organized offers back to you.'];
     const controls = requestFlow.querySelector('.v2-request-flow__controls');
     const detail = requestFlow.querySelector('.v2-request-flow__details');
     const detailTitle = requestFlow.querySelector('.v2-request-flow__detail-title');
