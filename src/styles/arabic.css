@@ -148,3 +148,18 @@ html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile p {
   direction: rtl;
   text-align: right;
 }
+
+
+/* Arabic request-flow tabs: keep each step number at the right edge of its box. */
+html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__controls button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__controls button span {
+  flex: 0 0 auto;
+  margin: 0 0 0 7px;
+}
