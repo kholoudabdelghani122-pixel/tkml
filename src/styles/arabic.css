@@ -122,3 +122,22 @@ html[dir="rtl"] body.v2-home-page--ar .v2-hero__art {
     grid-column: 3;
   }
 }
+
+/* Arabic services cards: mirror all artwork and anchor it to each card's left edge. */
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__image {
+  transform: scaleX(-1);
+  transform-origin: center top;
+}
+
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--sourcing .v2-mosaic__image {
+  inset: auto auto 0 0;
+  object-position: left bottom;
+}
+
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--suppliers .v2-mosaic__image--suppliers,
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--intermediation .v2-mosaic__image--intermediation,
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--quotations .v2-mosaic__image--quotations,
+html[dir="rtl"] body.v2-home-page--ar .v2-mosaic__tile--development .v2-mosaic__image--development {
+  inset: 0 auto auto 0;
+  object-position: left top;
+}
