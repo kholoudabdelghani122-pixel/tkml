@@ -5,3 +5,51 @@ html[lang="ar"] {
 html[lang="ar"] body {
   font-family: Arial, Tahoma, sans-serif;
 }
+
+
+/* In RTL layouts, keep copy on the right and mirror image-bearing hero artwork to the left. */
+html[dir="rtl"] .v2-hero__art {
+  right: auto !important;
+  left: -3vw !important;
+  object-position: left top !important;
+  transform-origin: left top !important;
+}
+
+html[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+  right: auto !important;
+  left: -4vw !important;
+  object-position: left bottom !important;
+  transform-origin: left bottom !important;
+}
+
+html[dir="rtl"] .v2-principle__image {
+  right: auto !important;
+  left: calc((100% - 100vw) / 2) !important;
+  object-position: left center !important;
+  transform-origin: left center !important;
+}
+
+@media (max-width: 767px) {
+  html[dir="rtl"] .v2-hero__art {
+    right: auto !important;
+    left: -30% !important;
+    object-position: left top !important;
+  }
+
+  html[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+    right: auto !important;
+    left: -4vw !important;
+    object-position: left top !important;
+  }
+
+  html[dir="rtl"] .v2-principle__image {
+    right: auto !important;
+    left: calc((100% - 100vw) / 2) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  html[dir="rtl"] .v2-hero__art {
+    left: -38% !important;
+  }
+}
