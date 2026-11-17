@@ -11,7 +11,7 @@
 .about-page__intro p{margin:0 0 22px}
 .about-page__intro p:last-child{margin-bottom:0}
 .about-page__what{padding-block:clamp(64px,8vw,116px);background:transparent}
-.about-page__section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:38px}
+.about-page__section-heading{display:flex;flex-direction:row-reverse;justify-content:space-between;align-items:end;gap:32px;margin-bottom:38px}
 .about-page__section-heading .about-page__eyebrow{margin:0}
 .about-page h2{font-size:clamp(2.6rem,5.4vw,5.4rem)}
 .about-page__what-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
