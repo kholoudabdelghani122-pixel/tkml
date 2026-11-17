@@ -1,0 +1,7 @@
+/* Arabic copy uses a system Arabic typeface while keeping the shared page geometry and colors. */
+html[lang="ar"] {
+  font-family: Arial, Tahoma, sans-serif;
+}
+html[lang="ar"] body {
+  font-family: Arial, Tahoma, sans-serif;
+}
