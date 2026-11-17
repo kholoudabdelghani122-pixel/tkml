@@ -31,148 +31,148 @@
   <main id="request">
     <section class="rfq-section container" aria-labelledby="rfq-section-title">
       <aside class="rfq-aside">
-        <p class="rfq-eyebrow">Start a request</p>
-        <h2 id="rfq-section-title">A clear brief makes coordination easier.</h2>
-        <p>Complete the four steps to prepare your sourcing request. You can review and edit every section before making a copy.</p>
+        <p class="rfq-eyebrow">ابدأ طلب توريد</p>
+        <h2 id="rfq-section-title">موجز واضح يجعل التنسيق أسهل.</h2>
+        <p>أكمل الخطوات الأربع لإعداد طلب التوريد. يمكنك مراجعة كل قسم وتعديله قبل إنهاء طلبك.</p>
         <ul class="rfq-checklist">
-          <li>Product and specifications</li><li>Quantity and delivery</li><li>الشركة and contact</li><li>Review your details</li>
+          <li>المنتج والمواصفات</li><li>الكمية والتسليم</li><li>الشركة وبيانات التواصل</li><li>مراجعة بياناتك</li>
         </ul>
       </aside>
 
       <div class="rfq-panel">
         <form id="req-form" novalidate>
           <div class="rfq-progress" aria-live="polite">
-            <span id="rfq-step-count">Step 1 of 4</span>
+            <span id="rfq-step-count">الخطوة ١ من ٤</span>
             <div class="rfq-progress__track" aria-hidden="true"><span id="rfq-progress-fill"></span></div>
-            <span class="rfq-progress__name" id="rfq-step-name">What do you need?</span>
+            <span class="rfq-progress__name" id="rfq-step-name">ما الذي تحتاجه؟</span>
           </div>
 
           <section class="rfq-step" data-step="1" aria-labelledby="rfq-step-1-title">
-            <h2 id="rfq-step-1-title" class="rfq-step__title" tabindex="-1">What do you need?</h2>
-            <p class="rfq-step__intro">Start with the product or category and a clear description of what you’re looking for.</p>
+            <h2 id="rfq-step-1-title" class="rfq-step__title" tabindex="-1">ما الذي تحتاجه؟</h2>
+            <p class="rfq-step__intro">ابدأ بذكر المنتج أو الفئة، ثم اكتب وصفًا واضحًا لما تبحث عنه.</p>
             <div class="rfq-fields">
               <div class="rfq-field">
-                <label for="product-category">Product or category <span aria-hidden="true">*</span></label>
+                <label for="product-category">المنتج أو الفئة <span aria-hidden="true">*</span></label>
                 <input id="product-category" name="productCategory" type="text" autocomplete="off" required aria-describedby="hint-category">
-                <small id="hint-category">For example, industrial materials, equipment, or packaging.</small><p class="rfq-error" id="error-product-category"></p>
+                <small id="hint-category">مثال: مواد صناعية أو معدات أو مواد تغليف.</small><p class="rfq-error" id="error-product-category"></p>
               </div>
               <div class="rfq-field">
-                <label for="product-description">Product description <span aria-hidden="true">*</span></label>
+                <label for="product-description">وصف المنتج <span aria-hidden="true">*</span></label>
                 <textarea id="product-description" name="productDescription" rows="4" required aria-describedby="hint-description"></textarea>
-                <small id="hint-description">Describe the product, intended use, and any important requirements.</small><p class="rfq-error" id="error-product-description"></p>
+                <small id="hint-description">صِف المنتج واستخدامه المقصود وأي متطلبات مهمة.</small><p class="rfq-error" id="error-product-description"></p>
               </div>
               <div class="rfq-field">
-                <label for="technical-specifications">Technical specifications <span class="rfq-optional">اختياري</span></label>
-                <textarea id="technical-specifications" name="technicalSpecifications" rows="4" aria-describedby="hint-specifications" placeholder="Add any details that will help us assess the requirement."></textarea>
-                <small id="hint-specifications">If available, include materials, dimensions, standards, certifications, and preferred supplier origin.</small>
+                <label for="technical-specifications">المواصفات الفنية <span class="rfq-optional">اختياري</span></label>
+                <textarea id="technical-specifications" name="technicalSpecifications" rows="4" aria-describedby="hint-specifications" placeholder="أضف تفاصيل تساعدنا على تقييم متطلباتك."></textarea>
+                <small id="hint-specifications">إن توفرت، اذكر المواد والأبعاد والمعايير والشهادات وبلد المنشأ المفضل للمورّد.</small>
               </div>
               <fieldset class="rfq-field rfq-upload-field">
-                <legend>RFQ attachments <span class="rfq-optional">اختياري</span></legend>
+                <legend>مرفقات طلب عرض السعر <span class="rfq-optional">اختياري</span></legend>
                 <div class="rfq-drop" id="rfq-drop">
                   <input class="rfq-file-input" id="rfq-files" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.png,.jpg,.jpeg,.zip" aria-describedby="hint-files error-files">
-                  <label for="rfq-files" class="rfq-drop__label"><strong>Drop files here or <span>browse</span></strong><small>PDF, DOC/DOCX, XLS/XLSX, CSV, PNG/JPG, ZIP · Up to 10 files, 20 MB each</small></label>
+                  <label for="rfq-files" class="rfq-drop__label"><strong>أفلت الملفات هنا أو <span>اخترها من جهازك</span></strong><small>PDF, DOC/DOCX, XLS/XLSX, CSV, PNG/JPG, ZIP · Up to 10 files, 20 MB each</small></label>
                 </div>
-                <small id="hint-files">Accepted files stay attached while you move between steps.</small>
+                <small id="hint-files">ستبقى الملفات المرفقة محفوظة أثناء التنقل بين الخطوات.</small>
                 <p class="rfq-error" id="error-files" role="status" aria-live="polite"></p>
-                <ul class="rfq-file-list" id="rfq-file-list" aria-label="Selected attachments"></ul>
+                <ul class="rfq-file-list" id="rfq-file-list" aria-label="المرفقات المحددة"></ul>
               </fieldset>
             </div>
           </section>
 
           <section class="rfq-step" data-step="2" aria-labelledby="rfq-step-2-title" hidden>
-            <h2 id="rfq-step-2-title" class="rfq-step__title" tabindex="-1">Quantity &amp; delivery</h2>
-            <p class="rfq-step__intro">Share the quantity you have in mind and where it needs to go.</p>
+            <h2 id="rfq-step-2-title" class="rfq-step__title" tabindex="-1">الكمية والتسليم</h2>
+            <p class="rfq-step__intro">أدخل الكمية المطلوبة ووجهة التسليم.</p>
             <div class="rfq-fields rfq-fields--two">
               <div class="rfq-field">
-                <label for="quantity">Quantity <span aria-hidden="true">*</span></label>
+                <label for="quantity">الكمية <span aria-hidden="true">*</span></label>
                 <input id="quantity" name="quantity" type="number" min="0" step="any" inputmode="decimal" required aria-describedby="hint-quantity error-quantity">
-                <small id="hint-quantity">Estimates are welcome.</small><p class="rfq-error" id="error-quantity"></p>
+                <small id="hint-quantity">يمكنك إدخال كمية تقديرية.</small><p class="rfq-error" id="error-quantity"></p>
               </div>
               <div class="rfq-field">
-                <label for="unit">Unit <span aria-hidden="true">*</span></label>
+                <label for="unit">وحدة القياس <span aria-hidden="true">*</span></label>
                 <select id="unit" name="unit" required aria-describedby="error-unit">
-                  <option value="">Select a unit</option><option>Pieces</option><option>Units</option><option>Kilograms</option><option>Metric tonnes</option><option>Litres</option><option>Metres</option><option>Square metres</option><option>Cubic metres</option><option>Sets</option><option>Pallets</option><option>Containers</option><option value="Other">Other</option>
+                  <option value="">اختر وحدة القياس</option><option value="قطع">قطع</option><option value="وحدات">وحدات</option><option value="كيلوغرامات">كيلوغرامات</option><option value="أطنان مترية">أطنان مترية</option><option value="لترات">لترات</option><option value="أمتار">أمتار</option><option value="أمتار مربعة">أمتار مربعة</option><option value="أمتار مكعبة">أمتار مكعبة</option><option value="مجموعات">مجموعات</option><option value="منصات تحميل">منصات تحميل</option><option value="حاويات">حاويات</option><option value="Other">أخرى</option>
                 </select><p class="rfq-error" id="error-unit"></p>
               </div>
               <div class="rfq-field" id="other-unit-field" hidden>
-                <label for="other-unit">Specify unit <span aria-hidden="true">*</span></label>
+                <label for="other-unit">حدد وحدة القياس <span aria-hidden="true">*</span></label>
                 <input id="other-unit" name="otherUnit" type="text" autocomplete="off" aria-describedby="error-other-unit">
                 <p class="rfq-error" id="error-other-unit"></p>
               </div>
               <div class="rfq-field rfq-field--full">
-                <label for="delivery-destination">Delivery destination <span aria-hidden="true">*</span></label>
-                <input id="delivery-destination" name="deliveryDestination" type="text" autocomplete="shipping country-name" required aria-describedby="hint-destination error-delivery-destination" placeholder="Country, city, port, or site">
-                <small id="hint-destination">Enter the destination for this delivery. This is separate from your company country.</small><p class="rfq-error" id="error-delivery-destination"></p>
+                <label for="delivery-destination">وجهة التسليم <span aria-hidden="true">*</span></label>
+                <input id="delivery-destination" name="deliveryDestination" type="text" autocomplete="shipping country-name" required aria-describedby="hint-destination error-delivery-destination" placeholder="الدولة أو المدينة أو الميناء أو الموقع">
+                <small id="hint-destination">أدخل وجهة هذا التسليم. وهي مستقلة عن بلد الشركة.</small><p class="rfq-error" id="error-delivery-destination"></p>
               </div>
               <div class="rfq-field">
-                <label for="target-date">Target delivery date <span class="rfq-optional">اختياري</span></label>
+                <label for="target-date">التاريخ المستهدف للتسليم <span class="rfq-optional">اختياري</span></label>
                 <input id="target-date" name="targetDate" type="date">
               </div>
               <div class="rfq-field">
-                <label for="order-frequency">Order frequency <span class="rfq-optional">اختياري</span></label>
-                <select id="order-frequency" name="orderFrequency"><option value="">Select if known</option><option>One-time order</option><option>Recurring order</option><option>Framework or ongoing supply</option><option>Not sure yet</option></select>
+                <label for="order-frequency">وتيرة الطلب <span class="rfq-optional">اختياري</span></label>
+                <select id="order-frequency" name="orderFrequency"><option value="">اختر إن كانت معروفة</option><option>طلب لمرة واحدة</option><option>طلب متكرر</option><option>اتفاقية إطارية أو توريد مستمر</option><option>غير متأكد بعد</option></select>
               </div>
               <div class="rfq-field">
-                <label for="budget-amount">Indicative budget <span class="rfq-optional">اختياري</span></label>
+                <label for="budget-amount">الميزانية التقديرية <span class="rfq-optional">اختياري</span></label>
                 <input id="budget-amount" name="budgetAmount" type="number" min="0" step="any" inputmode="decimal" aria-describedby="hint-budget error-budget-amount">
-                <small id="hint-budget">If you add a budget, include its currency.</small><p class="rfq-error" id="error-budget-amount"></p>
+                <small id="hint-budget">إذا أضفت ميزانية، يرجى تحديد عملتها.</small><p class="rfq-error" id="error-budget-amount"></p>
               </div>
               <div class="rfq-field">
-                <label for="budget-currency">Budget currency <span class="rfq-optional">اختياري</span></label>
-                <select id="budget-currency" name="budgetCurrency"><option value="">Select if known</option><option>USD</option><option>EUR</option><option>GBP</option><option>LYD</option><option>Other</option></select><p class="rfq-error" id="error-budget-currency"></p>
+                <label for="budget-currency">عملة الميزانية <span class="rfq-optional">اختياري</span></label>
+                <select id="budget-currency" name="budgetCurrency"><option value="">اختر إن كانت معروفة</option><option value="USD">دولار أمريكي (USD)</option><option value="EUR">يورو (EUR)</option><option value="GBP">جنيه إسترليني (GBP)</option><option value="LYD">دينار ليبي (LYD)</option><option value="OTHER">أخرى</option></select><p class="rfq-error" id="error-budget-currency"></p>
               </div>
               <div class="rfq-field">
-                <label for="incoterm">Preferred Incoterm <span class="rfq-optional">اختياري</span></label>
-                <select id="incoterm" name="incoterm"><option value="">Select if known</option><option>EXW</option><option>FCA</option><option>FAS</option><option>FOB</option><option>CFR</option><option>CIF</option><option>CPT</option><option>CIP</option><option>DAP</option><option>DPU</option><option>DDP</option><option>Not sure</option></select>
+                <label for="incoterm">مصطلح إنكوتيرمز المفضل <span class="rfq-optional">اختياري</span></label>
+                <select id="incoterm" name="incoterm"><option value="">اختر إن كانت معروفة</option><option>EXW</option><option>FCA</option><option>FAS</option><option>FOB</option><option>CFR</option><option>CIF</option><option>CPT</option><option>CIP</option><option>DAP</option><option>DPU</option><option>DDP</option><option value="UNSURE">غير متأكد</option></select>
               </div>
               <div class="rfq-field rfq-field--full">
-                <label for="delivery-notes">Delivery notes <span class="rfq-optional">اختياري</span></label>
-                <textarea id="delivery-notes" name="deliveryNotes" rows="3" placeholder="Add any delivery or logistics details that may be useful."></textarea>
+                <label for="delivery-notes">ملاحظات التسليم <span class="rfq-optional">اختياري</span></label>
+                <textarea id="delivery-notes" name="deliveryNotes" rows="3" placeholder="أضف أي تفاصيل مفيدة عن التسليم أو الخدمات اللوجستية."></textarea>
               </div>
             </div>
           </section>
 
           <section class="rfq-step" data-step="3" aria-labelledby="rfq-step-3-title" hidden>
-            <h2 id="rfq-step-3-title" class="rfq-step__title" tabindex="-1">الشركة &amp; contact</h2>
-            <p class="rfq-step__intro">Let us know who is making the request and how we can follow up.</p>
+            <h2 id="rfq-step-3-title" class="rfq-step__title" tabindex="-1">الشركة وبيانات التواصل</h2>
+            <p class="rfq-step__intro">أخبرنا بمن يقدم الطلب وكيف يمكننا التواصل للمتابعة.</p>
             <div class="rfq-fields rfq-fields--two">
-              <div class="rfq-field rfq-field--full"><label for="company-name">الشركة name <span aria-hidden="true">*</span></label><input id="company-name" name="companyName" type="text" autocomplete="organization" required aria-describedby="error-company-name"><p class="rfq-error" id="error-company-name"></p></div>
-              <div class="rfq-field"><label for="company-country">الشركة country <span aria-hidden="true">*</span></label><input id="company-country" name="companyCountry" type="text" autocomplete="country-name" required aria-describedby="error-company-country"><p class="rfq-error" id="error-company-country"></p></div>
-              <div class="rfq-field"><label for="contact-name">تواصل name <span aria-hidden="true">*</span></label><input id="contact-name" name="contactName" type="text" autocomplete="name" required aria-describedby="error-contact-name"><p class="rfq-error" id="error-contact-name"></p></div>
+              <div class="rfq-field rfq-field--full"><label for="company-name">اسم الشركة <span aria-hidden="true">*</span></label><input id="company-name" name="companyName" type="text" autocomplete="organization" required aria-describedby="error-company-name"><p class="rfq-error" id="error-company-name"></p></div>
+              <div class="rfq-field"><label for="company-country">بلد الشركة <span aria-hidden="true">*</span></label><input id="company-country" name="companyCountry" type="text" autocomplete="country-name" required aria-describedby="error-company-country"><p class="rfq-error" id="error-company-country"></p></div>
+              <div class="rfq-field"><label for="contact-name">اسم جهة التواصل <span aria-hidden="true">*</span></label><input id="contact-name" name="contactName" type="text" autocomplete="name" required aria-describedby="error-contact-name"><p class="rfq-error" id="error-contact-name"></p></div>
               <div class="rfq-field"><label for="contact-email">البريد الإلكتروني <span aria-hidden="true">*</span></label><input id="contact-email" name="email" type="email" autocomplete="email" required aria-describedby="error-contact-email"><p class="rfq-error" id="error-contact-email"></p></div>
-              <div class="rfq-field"><label for="contact-phone">Phone or WhatsApp <span class="rfq-optional">اختياري</span></label><input id="contact-phone" name="phone" type="tel" autocomplete="tel"></div>
+              <div class="rfq-field"><label for="contact-phone">الهاتف أو واتساب <span class="rfq-optional">اختياري</span></label><input id="contact-phone" name="phone" type="tel" autocomplete="tel"></div>
             </div>
           </section>
 
           <section class="rfq-step" data-step="4" aria-labelledby="rfq-step-4-title" hidden>
-            <h2 id="rfq-step-4-title" class="rfq-step__title" tabindex="-1">Review your request</h2>
-            <p class="rfq-step__intro">Check the information below. Edit any section before finishing your request.</p>
+            <h2 id="rfq-step-4-title" class="rfq-step__title" tabindex="-1">راجع طلبك</h2>
+            <p class="rfq-step__intro">راجع المعلومات أدناه، وعدّل أي قسم قبل إنهاء طلبك.</p>
             <div class="rfq-review" id="rfq-review"></div>
             <div class="rfq-consent">
               <input id="confirmation" name="confirmation" type="checkbox" required aria-describedby="error-confirmation">
-              <div><label for="confirmation">I agree that tkml Systems may use these details to review my request and contact me about it.</label><p class="rfq-error" id="error-confirmation"></p></div>
+              <div><label for="confirmation">أوافق على استخدام tkml Systems لهذه البيانات لمراجعة طلبي والتواصل معي بشأنه.</label><p class="rfq-error" id="error-confirmation"></p></div>
             </div>
-            <p class="rfq-preview-note">Demo form: requests are not delivered to tkml until the submission service is connected.</p>
+            <p class="rfq-preview-note">نموذج تجريبي: لن يصل طلبك إلى tkml حتى يتم ربط خدمة الإرسال.</p>
             <div class="rfq-preview-result" id="rfq-preview-result" role="status" aria-live="polite" hidden>
               <div class="rfq-status-panel" id="rfq-success-status" hidden>
                 <span class="rfq-status-icon" aria-hidden="true">✓</span>
                 <div>
-                  <strong>Thank you for your request.</strong>
-                  <p>Someone from tkml will contact you within the next 24 hours.</p>
-                  <p class="rfq-status-note">This is a design preview only. Your request has not been sent to tkml yet.</p>
+                  <strong>شكرًا لك على طلبك.</strong>
+                  <p>سيتواصل معك أحد ممثلي tkml خلال ٢٤ ساعة.</p>
+                  <p class="rfq-status-note">هذه معاينة للتصميم فقط. لم يتم إرسال طلبك إلى tkml بعد.</p>
                 </div>
               </div>
               <div class="rfq-status-panel rfq-status-panel--error" id="rfq-failure-status" role="alert" hidden>
                 <span class="rfq-status-icon" aria-hidden="true">!</span>
                 <div>
-                  <strong>We couldn’t complete your request.</strong>
-                  <p>Your details and attachments are still here. Please try again.</p>
-                  <p class="rfq-status-note">This is a sample failure state. The request service is not connected yet.</p>
+                  <strong>تعذر إكمال طلبك.</strong>
+                  <p>ما زالت بياناتك ومرفقاتك محفوظة. يرجى المحاولة مرة أخرى.</p>
+                  <p class="rfq-status-note">هذه حالة فشل تجريبية. لم يتم ربط خدمة استقبال الطلبات بعد.</p>
                 </div>
               </div>
               <div class="rfq-status-actions">
-                <button class="button button--outline" id="copy-summary" type="button">Copy summary</button>
-                <button class="button button--primary" id="rfq-retry" type="button" hidden>Try again</button>
+                <button class="button button--outline" id="copy-summary" type="button">نسخ ملخص الطلب</button>
+                <button class="button button--primary" id="rfq-retry" type="button" hidden>حاول مرة أخرى</button>
                 <span class="rfq-copy-status" id="copy-status" aria-live="polite"></span>
               </div>
             </div>
@@ -180,10 +180,10 @@
 
           <div class="rfq-form-error" id="rfq-form-error" role="alert" hidden></div>
           <div class="rfq-controls">
-            <button class="button button--outline" id="rfq-back" type="button" hidden>Back</button>
+            <button class="button button--outline" id="rfq-back" type="button" hidden>رجوع</button>
             <span class="rfq-controls__spacer"></span>
-            <button class="button button--primary" id="rfq-continue" type="button">Continue</button>
-            <button class="button button--primary" id="rfq-preview" type="submit" hidden>Finish request</button>
+            <button class="button button--primary" id="rfq-continue" type="button">متابعة</button>
+            <button class="button button--primary" id="rfq-preview" type="submit" hidden>إنهاء الطلب</button>
           </div>
         </form>
       </div>
