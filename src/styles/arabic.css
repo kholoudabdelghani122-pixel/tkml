@@ -180,3 +180,44 @@ html[dir="rtl"] .v2-principle__image {
   transform: scaleX(-1) scale(1.25) !important;
   transform-origin: left center !important;
 }
+
+
+/* Keep every Arabic desktop header item inside the same navbar row.
+   RTL column order is logo, navigation, English switch, then sourcing CTA from right to left. */
+@media (min-width: 768px) {
+  html[dir="rtl"] .v2-header .site-header__inner {
+    grid-template-columns: auto minmax(0, 1fr) auto auto;
+    grid-template-rows: minmax(64px, auto);
+    align-items: center;
+  }
+
+  html[dir="rtl"] .v2-header .v2-wordmark--logo {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+  }
+
+  html[dir="rtl"] .v2-header .site-nav {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    min-width: 0;
+  }
+
+  html[dir="rtl"] .v2-header .v2-language-switch--desktop {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: center;
+    justify-self: end;
+    margin-inline: 0;
+    white-space: nowrap;
+  }
+
+  html[dir="rtl"] .v2-header .v2-header-cta {
+    grid-column: 4;
+    grid-row: 1;
+    align-self: center;
+    justify-self: end;
+    white-space: nowrap;
+  }
+}
