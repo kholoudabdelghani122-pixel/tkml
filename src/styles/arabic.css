@@ -53,3 +53,14 @@ html[dir="rtl"] .v2-principle__image {
     left: -38% !important;
   }
 }
+
+/* Arabic Partners page: mirror the artwork and pin it to the hero's top-left screen edges. */
+html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+  top: 0 !important;
+  left: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  object-position: left top !important;
+  transform: scaleX(-1) !important;
+  transform-origin: center top !important;
+}
