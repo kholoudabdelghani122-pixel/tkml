@@ -64,3 +64,9 @@
 .news-featured img{display:block;width:100%;max-height:min(58vw,620px);object-fit:cover}
 .news-card__image{display:block;width:100%;height:clamp(150px,18vw,220px);object-fit:cover;border:1px solid rgba(187,241,255,.12)}
 @media(max-width:640px){.news-article__header h1{font-size:clamp(2.6rem,12vw,4rem)}.news-card__image{height:190px}}
+
+/* Article category and publication date share one metadata row. */
+.news-article__meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:18px;color:var(--color-muted);font-size:.82rem}
+.news-article__meta .news-eyebrow{margin:0;font-size:.75rem}
+.news-article__meta-separator{color:var(--color-muted)}
+.news-article__meta time{display:inline-block;margin:0;color:var(--color-light-grey);font-size:.82rem}
