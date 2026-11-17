@@ -169,3 +169,17 @@ html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__controls button span {
 html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__heading > p {
   text-align: right;
 }
+
+
+/* Arabic foundation section: mirror the container artwork and anchor its visible edge to the viewport left. */
+html[dir="rtl"] .v2-principle__image {
+  left: calc((100% - 100vw) / 2 - 74%) !important;
+  transform: scaleX(-1) scale(1.25) !important;
+  transform-origin: right center !important;
+}
+
+@media (max-width: 767px) {
+  html[dir="rtl"] .v2-principle__image {
+    left: calc((100% - 100vw) / 2 - 100%) !important;
+  }
+}
