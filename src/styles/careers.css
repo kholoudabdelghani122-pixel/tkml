@@ -4,7 +4,7 @@
 .careers-page .container{position:relative;z-index:1}
 .careers-page__hero{padding-block:clamp(116px,14vw,205px) clamp(78px,9vw,132px)}
 .careers-page__hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.72fr);gap:clamp(38px,8vw,120px);align-items:end}
-.careers-page__eyebrow{margin:0 0 20px;color:var(--color-orange);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.careers-page__eyebrow{margin:0 0 20px;color:var(--color-orange);font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}.careers-page__eyebrow .brand-lowercase{text-transform:lowercase}
 .careers-page h1,.careers-page h2{margin:0;font-weight:600;letter-spacing:-.075em;line-height:.94}
 .careers-page h1{max-width:10ch;font-size:clamp(3.2rem,7.5vw,7.6rem)}
 .careers-page h2{font-size:clamp(2.6rem,5.4vw,5.4rem)}
