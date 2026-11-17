@@ -109,3 +109,16 @@ html[dir="rtl"] body.v2-home-page--ar .v2-hero__art {
   transform: scaleX(-1) !important;
   transform-origin: center top !important;
 }
+
+
+/* Arabic desktop navigation: keep the English switch before the CTA in RTL reading order,
+   leaving the sourcing button at the far left. */
+@media (min-width: 768px) {
+  html[dir="rtl"] .v2-header .v2-header-cta {
+    grid-column: 4;
+  }
+
+  html[dir="rtl"] .v2-header .v2-language-switch--desktop {
+    grid-column: 3;
+  }
+}
