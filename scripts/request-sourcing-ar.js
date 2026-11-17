@@ -157,8 +157,8 @@
         renderFiles();
         fileError.textContent = '';
         clearPreview();
-        const nextإزالة = fileList.querySelectorAll('.rfq-file-remove')[Math.min(index, files.length - 1)];
-        if (nextإزالة) nextإزالة.focus();
+        const nextRemoveButton = fileList.querySelectorAll('.rfq-file-remove')[Math.min(index, files.length - 1)];
+        if (nextRemoveButton) nextRemoveButton.focus();
         else fileInput.focus();
       });
       item.append(description, remove);
@@ -304,9 +304,9 @@
 
   unit.addEventListener('change', () => {
     const showOther = unit.value === 'Other';
-    otherUnitField.hidden = !showأخرى;
-    otherUnit.required = showأخرى;
-    if (!showأخرى) { otherUnit.value = ''; setError(otherUnit, ''); }
+    otherUnitField.hidden = !showOther;
+    otherUnit.required = showOther;
+    if (!showOther) { otherUnit.value = ''; setError(otherUnit, ''); }
     clearPreview();
   });
 
