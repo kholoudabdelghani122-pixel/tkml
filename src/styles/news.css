@@ -70,3 +70,31 @@
 .news-article__meta .news-eyebrow{margin:0;font-size:.75rem}
 .news-article__meta-separator{color:var(--color-muted)}
 .news-article__meta time{display:inline-block;margin:0;color:var(--color-light-grey);font-size:.82rem}
+
+/* Mobile related articles swipe rail: keep the section aligned left and extend to the viewport edge. */
+@media(max-width:640px){
+  .news-related{
+    width:calc(100% + (100vw - 100%) / 2);
+  }
+  .news-related .news-grid{
+    display:flex;
+    grid-template-columns:none;
+    gap:12px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:4px 14px 12px 0;
+    scroll-snap-type:x mandatory;
+    overscroll-behavior-x:contain;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;
+    scrollbar-color:rgba(240,91,27,.55) rgba(187,241,255,.1);
+  }
+  .news-related .news-card{
+    flex:0 0 calc(100% - 34px);
+    min-width:0;
+    scroll-snap-align:start;
+  }
+  .news-related .news-grid::-webkit-scrollbar{height:4px}
+  .news-related .news-grid::-webkit-scrollbar-track{background:rgba(187,241,255,.1)}
+  .news-related .news-grid::-webkit-scrollbar-thumb{background:rgba(240,91,27,.55)}
+}
