@@ -43,3 +43,16 @@ body.v2-contact-page{
 body.v2-contact-page #smooth-content,
 body.v2-contact-page main#contact,
 body.v2-contact-page .v2-footer{min-height:100%;background:transparent}
+
+
+/* The contact details stay below the introduction on desktop and follow the form on mobile. */
+@media(min-width:768px){
+  .v2-contact-page #contact .contact-aside{grid-column:1;grid-row:1}
+  .v2-contact-page #contact .contact-panel{grid-column:2;grid-row:1}
+  .v2-contact-page #contact .contact-details{grid-column:1;grid-row:2;margin-top:0}
+}
+@media(max-width:767px){
+  .v2-contact-page #contact .contact-aside,
+  .v2-contact-page #contact .contact-panel,
+  .v2-contact-page #contact .contact-details{grid-column:1;grid-row:auto}
+}
