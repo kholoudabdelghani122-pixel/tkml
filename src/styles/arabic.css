@@ -163,3 +163,9 @@ html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__controls button span {
   flex: 0 0 auto;
   margin: 0 0 0 7px;
 }
+
+
+/* Keep the Arabic request-flow intro paragraph in place and align its text to the right. */
+html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__heading > p {
+  text-align: right;
+}
