@@ -98,3 +98,14 @@ html.v2-ar-about[dir="rtl"] body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* Arabic homepage hero: mirror the artwork and pin its full image box to the viewport's top-left edge. */
+html[dir="rtl"] body.v2-home-page--ar .v2-hero__art {
+  top: 0 !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: 0 !important;
+  object-position: left top !important;
+  transform: scaleX(-1) !important;
+  transform-origin: center top !important;
+}
