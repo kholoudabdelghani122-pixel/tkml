@@ -687,3 +687,6 @@
 @media(min-width:768px){
   .v2-coming-soon-page .v2-coming-soon__art{top:-46svh;right:-4vw;height:130svh;max-width:none;object-fit:contain;object-position:right bottom}
 }
+
+/* Keep I Supply focus artwork clear of each card's lower edge. */
+.v2-isupply__card .v2-isupply__card-image{bottom:4%}
