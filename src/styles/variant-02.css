@@ -713,3 +713,28 @@
   position:relative;
   z-index:2;
 }
+
+
+/* Arabic language link and home-page typography. */
+.v2-language-switch{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-inline-start:clamp(10px,1.2vw,18px);
+  color:var(--color-white);
+  font-size:.84rem;
+  font-weight:600;
+  line-height:1;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:color .18s ease;
+}
+.v2-language-switch:hover{color:var(--color-orange)}
+.v2-language-switch:focus-visible{color:var(--color-orange);outline:2px solid var(--color-orange);outline-offset:4px}
+.v2-language-switch--mobile{display:none}
+.v2-home-page--ar{font-family:Arial,Tahoma,sans-serif}
+.v2-home-page--ar .v2-language-switch{font-family:Arial,Tahoma,sans-serif}
+@media(max-width:767px){
+  .v2-header .v2-language-switch--desktop{display:none}
+  .v2-mobile-nav nav .v2-language-switch--mobile{display:block;margin:0;padding:12px 0}
+}
