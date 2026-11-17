@@ -663,7 +663,7 @@
 
 /* I Supply negotiation visual: reviewing commercial terms together. */
 .v2-isupply__card--negotiation::after{display:none}
-.v2-isupply__card-image--negotiation{right:-5%;bottom:-9%;width:112%;height:94%;object-fit:contain;object-position:right bottom}
+.v2-isupply__card-image--negotiation{right:-5%;bottom:-9%;width:133%;height:111%;object-fit:contain;object-position:right bottom}
 
 /* I Supply procurement visual: staged cargo moving through a coordinated process. */
 .v2-isupply__card--procurement::after{display:none}
