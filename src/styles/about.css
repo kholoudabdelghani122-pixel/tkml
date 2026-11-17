@@ -59,7 +59,7 @@
  .about-page__section-heading{display:block;margin-bottom:28px}
  .about-page__section-heading .about-page__eyebrow{margin-bottom:14px}
  .about-page__what-grid{grid-template-columns:1fr}
- .about-page__copy-card{min-height:190px}
+ .about-page__copy-card{min-height:190px;justify-content:flex-start;gap:12px}
  .about-page__standards-copy,.about-page__future-copy{padding-top:0}
  .about-page__founder-note p{font-size:var(--type-body)}
  .about-page__cta-actions{display:grid;grid-template-columns:1fr}
