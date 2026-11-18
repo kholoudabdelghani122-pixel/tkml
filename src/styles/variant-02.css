@@ -752,3 +752,9 @@
 @media(max-width:767px){
   html[lang="en"] .v2-coming-soon-page .v2-coming-soon__art{top:-10svh}
 }
+
+
+/* Lower only the Arabic Partners artwork on mobile while preserving the artwork fade and sizing. */
+@media(max-width:767px){
+  html[lang="ar"] .v2-coming-soon-page .v2-coming-soon__art{top:-19svh}
+}
