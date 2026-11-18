@@ -179,14 +179,13 @@ html[dir="rtl"] body.v2-home-page--ar .v2-request-flow__heading > p {
 }
 
 
-/* Arabic foundation section: mirror the container artwork and anchor its visible image box to the viewport left.
-   Keeping the box on the viewport edge and scaling from that edge prevents it from drifting off-screen. */
+/* Arabic foundation section: mirror the container artwork while keeping its scaled bounds visible from the viewport's left edge. */
 html[dir="rtl"] .v2-principle__image {
   right: auto !important;
   left: calc((100% - 100vw) / 2) !important;
   object-position: left center !important;
   transform: scaleX(-1) scale(1.25) !important;
-  transform-origin: left center !important;
+  transform-origin: center center !important;
 }
 
 
