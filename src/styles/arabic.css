@@ -371,17 +371,20 @@ html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon::after {
 }
 
 
-/* Arabic Partners: use the actual alpha mask to reveal the page gradient; do not darken the art with an overlay. */
+/* Arabic Partners: apply a broad, unmistakable alpha fade to the gantry image,
+   then blend its lower edge into the unchanged page canvas as a fallback. */
 html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
   opacity: 1 !important;
-  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 46%, rgba(0, 0, 0, .82) 62%, rgba(0, 0, 0, .42) 80%, transparent 100%) !important;
-  mask-image: linear-gradient(to bottom, #000 0%, #000 46%, rgba(0, 0, 0, .82) 62%, rgba(0, 0, 0, .42) 80%, transparent 100%) !important;
+  -webkit-mask: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0,0,0,.72) 49%, rgba(0,0,0,.25) 72%, transparent 88%) !important;
+  mask: linear-gradient(to bottom, #000 0%, #000 30%, rgba(0,0,0,.72) 49%, rgba(0,0,0,.25) 72%, transparent 88%) !important;
   -webkit-mask-size: 100% 100% !important;
   mask-size: 100% 100% !important;
   -webkit-mask-repeat: no-repeat !important;
   mask-repeat: no-repeat !important;
+  mask-mode: alpha !important;
 }
 
 html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon::after {
-  background: transparent !important;
+  height: clamp(220px, 38svh, 420px) !important;
+  background: linear-gradient(to bottom, transparent 0%, rgba(9,19,24,.08) 22%, rgba(9,19,24,.34) 48%, rgba(9,19,24,.76) 76%, #091318 100%) !important;
 }
