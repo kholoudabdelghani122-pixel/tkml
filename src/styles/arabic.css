@@ -254,3 +254,13 @@ html[dir="rtl"] .v2-isupply__card-image--procurement {
 html[dir="rtl"] .v2-isupply__card-image--rfq {
   left: -4% !important;
 }
+
+/* Match the English Partners artwork's bottom fade on the Arabic mirrored hero. */
+html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+  -webkit-mask-image: linear-gradient(to bottom, #000 46%, rgba(0, 0, 0, .88) 58%, rgba(0, 0, 0, .58) 72%, rgba(0, 0, 0, .24) 86%, transparent 100%) !important;
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: linear-gradient(to bottom, #000 46%, rgba(0, 0, 0, .88) 58%, rgba(0, 0, 0, .58) 72%, rgba(0, 0, 0, .24) 86%, transparent 100%) !important;
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
