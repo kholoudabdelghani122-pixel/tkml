@@ -338,3 +338,18 @@ html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
     transform-origin: center top !important;
   }
 }
+
+/* Make the Arabic Partners artwork visibly dissolve into the same dark page canvas. */
+html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 34%, rgba(0, 0, 0, .78) 55%, rgba(0, 0, 0, .34) 76%, transparent 96%) !important;
+  -webkit-mask-size: 100% 100% !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 34%, rgba(0, 0, 0, .78) 55%, rgba(0, 0, 0, .34) 76%, transparent 96%) !important;
+  mask-size: 100% 100% !important;
+  mask-repeat: no-repeat !important;
+}
+
+/* The bottom overlay must finish on the page navy, not fade back to clear over the artwork. */
+html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon::after {
+  background: linear-gradient(to bottom, transparent 0%, rgba(9, 19, 24, .16) 30%, rgba(9, 19, 24, .52) 67%, #091318 100%) !important;
+}
