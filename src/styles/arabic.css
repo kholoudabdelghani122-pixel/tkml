@@ -264,3 +264,42 @@ html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
   mask-size: 100% 100%;
   mask-repeat: no-repeat;
 }
+
+
+/* Arabic mobile header: keep the menu on the left, CTA beside it, and logo flush right. */
+@media (max-width: 767px) {
+  html[dir="rtl"] .v2-header .site-header__inner,
+  html[dir="rtl"] .v2-header.is-scrolled .site-header__inner {
+    display: grid !important;
+    grid-template-columns: 40px max-content minmax(0, 1fr) !important;
+    direction: ltr;
+    align-items: center;
+    justify-content: initial;
+  }
+
+  html[dir="rtl"] .v2-header .v2-mobile-nav {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    order: initial;
+    margin: 0;
+  }
+
+  html[dir="rtl"] .v2-header .v2-header-cta {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: start;
+    order: initial;
+  }
+
+  html[dir="rtl"] .v2-header .v2-wordmark--logo,
+  html[dir="rtl"] .v2-header:not(.is-scrolled) .v2-wordmark--logo {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    order: initial;
+    width: clamp(88px, 25vw, 108px);
+    margin: 0;
+    transform: none;
+  }
+}
