@@ -78,15 +78,15 @@ html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
 }
 
 
-/* On mobile, anchor the mirrored Partners artwork to the section bottom edge. */
+/* On mobile, pin the mirrored Partners artwork to the screen and hero top edge. */
 @media (max-width: 767px) {
   html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
-    top: auto !important;
-    bottom: 0 !important;
+    top: 0 !important;
+    bottom: auto !important;
     left: 0 !important;
     right: auto !important;
-    object-position: left bottom !important;
-    transform-origin: center bottom !important;
+    object-position: left top !important;
+    transform-origin: center top !important;
   }
 }
 
