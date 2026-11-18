@@ -54,6 +54,18 @@ html[dir="rtl"] .v2-principle__image {
   }
 }
 
+/* Fade the Arabic Partners desktop artwork into the page background at its lower edge. */
+@media (min-width: 768px) {
+  html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 62%, rgba(0, 0, 0, .82) 76%, rgba(0, 0, 0, .42) 89%, transparent 100%) !important;
+    mask-image: linear-gradient(to bottom, #000 0%, #000 62%, rgba(0, 0, 0, .82) 76%, rgba(0, 0, 0, .42) 89%, transparent 100%) !important;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
+
 /* Arabic Partners page: mirror the artwork and pin it to the hero's top-left screen edges. */
 html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
   top: 0 !important;
