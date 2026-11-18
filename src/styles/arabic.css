@@ -228,3 +228,29 @@ html[dir="rtl"] .v2-principle__image {
     white-space: nowrap;
   }
 }
+
+
+/* Arabic I Supply focus cards: mirror each illustration and anchor it to the card's left side. */
+html[dir="rtl"] .v2-isupply__card-image {
+  right: auto !important;
+  left: -3% !important;
+  object-position: left bottom !important;
+  transform: scaleX(-1);
+  transform-origin: center center;
+}
+
+html[dir="rtl"] .v2-isupply__card-image--communication {
+  left: -4% !important;
+}
+
+html[dir="rtl"] .v2-isupply__card-image--negotiation {
+  left: -5% !important;
+}
+
+html[dir="rtl"] .v2-isupply__card-image--procurement {
+  left: -8% !important;
+}
+
+html[dir="rtl"] .v2-isupply__card-image--rfq {
+  left: -4% !important;
+}
