@@ -369,3 +369,19 @@ html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon::after {
   height: min(72svh, 680px) !important;
   background: linear-gradient(to bottom, transparent 0%, rgba(9, 19, 24, .08) 24%, rgba(9, 19, 24, .30) 48%, rgba(9, 19, 24, .68) 76%, rgba(9, 19, 24, .92) 100%) !important;
 }
+
+
+/* Arabic Partners: use the actual alpha mask to reveal the page gradient; do not darken the art with an overlay. */
+html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon__art {
+  opacity: 1 !important;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 46%, rgba(0, 0, 0, .82) 62%, rgba(0, 0, 0, .42) 80%, transparent 100%) !important;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 46%, rgba(0, 0, 0, .82) 62%, rgba(0, 0, 0, .42) 80%, transparent 100%) !important;
+  -webkit-mask-size: 100% 100% !important;
+  mask-size: 100% 100% !important;
+  -webkit-mask-repeat: no-repeat !important;
+  mask-repeat: no-repeat !important;
+}
+
+html.v2-ar-partners[dir="rtl"] .v2-coming-soon-page .v2-coming-soon::after {
+  background: transparent !important;
+}
