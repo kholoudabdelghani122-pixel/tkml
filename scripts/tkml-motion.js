@@ -1,3 +1,25 @@
+// Keep every language switch paired with the exact page being viewed.
+(function syncTKMLLanguageSwitches() {
+  const routeMarker = '/src/showcase/variant-02/';
+  const currentPath = window.location.pathname;
+  const markerIndex = currentPath.indexOf(routeMarker);
+  if (markerIndex < 0) return;
+
+  const routeBase = currentPath.slice(0, markerIndex + routeMarker.length);
+  let pageRoute = currentPath.slice(markerIndex + routeMarker.length);
+  const isArabic = pageRoute === 'ar' || pageRoute.startsWith('ar/');
+  if (isArabic) pageRoute = pageRoute === 'ar' ? '' : pageRoute.slice(3);
+  else pageRoute = 'ar/' + pageRoute;
+
+  const target = routeBase + pageRoute + window.location.search + window.location.hash;
+  document.querySelectorAll('a.v2-language-switch').forEach((link) => {
+    link.setAttribute('href', target);
+    const language = isArabic ? 'en' : 'ar';
+    link.setAttribute('lang', language);
+    link.setAttribute('hreflang', language);
+  });
+})();
+
 // TKML shared GSAP motion controller for the live variant page.
 const initializeTKMLMotion = function () {
   const pageContext = this;
