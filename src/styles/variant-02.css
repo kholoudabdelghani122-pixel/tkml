@@ -816,3 +816,11 @@
     min-height:100svh!important;
   }
 }
+
+/* Arabic Partners mobile hero uses the full viewport height; English and footer styling stay unchanged. */
+@media(max-width:767px){
+  html.v2-ar-partners body.v2-coming-soon-page .v2-coming-soon{
+    min-height:100vh!important;
+    min-height:100svh!important;
+  }
+}
