@@ -824,3 +824,35 @@
     min-height:100svh!important;
   }
 }
+
+
+/* Partners desktop artwork: make the bottom of the image dissolve into the hero background.
+   Keep the RTL artwork anchored on the left; this mask changes alpha only, not placement or scale. */
+@media (min-width: 768px) {
+  html.v2-en-partners body.v2-coming-soon-page .v2-coming-soon__art--partners-mobile,
+  html.v2-ar-partners body.v2-coming-soon-page .v2-coming-soon__art--partners-mobile {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 48%,
+      rgba(0, 0, 0, .78) 62%,
+      rgba(0, 0, 0, .4) 76%,
+      rgba(0, 0, 0, .12) 88%,
+      transparent 100%
+    ) !important;
+    mask-image: linear-gradient(
+      to bottom,
+      #000 0%,
+      #000 48%,
+      rgba(0, 0, 0, .78) 62%,
+      rgba(0, 0, 0, .4) 76%,
+      rgba(0, 0, 0, .12) 88%,
+      transparent 100%
+    ) !important;
+    -webkit-mask-size: 100% 100% !important;
+    mask-size: 100% 100% !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mask-repeat: no-repeat !important;
+    mask-mode: alpha !important;
+  }
+}
