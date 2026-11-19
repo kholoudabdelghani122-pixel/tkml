@@ -807,3 +807,12 @@
     transform:scaleX(-1)!important;transform-origin:center top!important;
   }
 }
+
+
+/* English Partners mobile hero fills one viewport; keep Arabic and other coming-soon pages unchanged. */
+@media(max-width:767px){
+  html.v2-en-partners body.v2-coming-soon-page .v2-coming-soon{
+    min-height:100vh!important;
+    min-height:100svh!important;
+  }
+}
