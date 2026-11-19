@@ -797,3 +797,13 @@
     left:0!important;right:auto!important;object-position:left top!important;transform:scaleX(-1)!important;transform-origin:center top!important;
   }
 }
+
+
+/* Arabic Partners mobile: make the mirrored artwork fill the viewport width so its visible edge reaches the left screen edge. Preserve the existing bottom alpha mask. */
+@media(max-width:767px){
+  html.v2-partners-mobile[lang="ar"] body.v2-coming-soon-page .v2-coming-soon__art--partners-mobile{
+    left:0!important;right:auto!important;width:100vw!important;height:100svh!important;
+    max-width:none!important;object-fit:cover!important;object-position:center top!important;
+    transform:scaleX(-1)!important;transform-origin:center top!important;
+  }
+}
