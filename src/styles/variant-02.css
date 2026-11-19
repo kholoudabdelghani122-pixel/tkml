@@ -856,3 +856,23 @@
     mask-mode: alpha !important;
   }
 }
+
+
+/* Arabic Partners: overlay the visible artwork at its lower edge. The source image has transparent canvas padding, so an alpha mask alone fades empty pixels; this colored layer fades the rendered crane/container into the hero navy while leaving copy above it. */
+html.v2-ar-partners body.v2-coming-soon-page .v2-coming-soon{isolation:isolate}
+html.v2-ar-partners body.v2-coming-soon-page .v2-coming-soon::after{
+  z-index:2!important;
+  inset:0!important;
+  height:auto!important;
+  background:
+    linear-gradient(to bottom, transparent 0%, rgba(9,19,24,.08) 18%, rgba(9,19,24,.42) 48%, rgba(9,19,24,.82) 78%, var(--color-navy) 100%)
+    left bottom / 68% 52% no-repeat !important;
+  pointer-events:none!important;
+}
+@media(max-width:767px){
+  html.v2-ar-partners body.v2-coming-soon-page .v2-coming-soon::after{
+    background:
+      linear-gradient(to bottom, transparent 0%, rgba(9,19,24,.1) 20%, rgba(9,19,24,.48) 52%, rgba(9,19,24,.86) 82%, var(--color-navy) 100%)
+      left bottom / 100% 48% no-repeat !important;
+  }
+}
